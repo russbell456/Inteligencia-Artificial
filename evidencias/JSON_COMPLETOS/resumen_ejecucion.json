@@ -1,0 +1,26 @@
+{
+  "n_filas_analiticas": 17992,
+  "n_columnas": 109,
+  "target_prevalencia": 0.256447309915518,
+  "n_conglomerados": 4116,
+  "semilla": 42,
+  "data_leakage": "GroupShuffleSplit/GroupKFold por CONGLOME; P307/P314A excluidos de predictores; P314B/P316 descriptivos; P314D solo clustering y excluida de clasificación supervisada; imputación, one-hot y escalado dentro de cada fold.",
+  "predictores_tic": [
+    "P316B: uso de computadora/tableta",
+    "P316C1-C10: conteo de tareas digitales autodeclaradas"
+  ],
+  "variables_cluster": [
+    "ingreso/gasto per cápita",
+    "ratio alumnos/docente distrital",
+    "frecuencia TIC P314D con 0=no uso",
+    "rezago escolar en años",
+    "acceso a agua, saneamiento y electricidad"
+  ],
+  "limitaciones": [
+    "Padlocal.dbf existente sin coordenadas numéricas.",
+    "ENAHO no tiene COD_MOD/CODLOCAL: ESCALE se agrega por UBIGEO y no identifica la escuela individual.",
+    "Los archivos disponibles no sustentan indicadores escolares de altitud, equipamiento informático ni conectividad.",
+    "La matrícula ESCALE se vincula entre archivos escolares por COD_MOD+ANEXO; el resultado final es contexto distrital.",
+    "El resultado es no uso de Internet durante el mes previo, no una medida directa de competencia o aprendizaje."
+  ]
+}

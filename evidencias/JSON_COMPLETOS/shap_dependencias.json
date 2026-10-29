@@ -1,0 +1,16 @@
+[
+  {
+    "grafico": 1,
+    "eje_x": "P1144 original (0=no Internet en hogar; 1=sí)",
+    "color": "P300A original: Quechua, Aimara, otras lenguas/faltante",
+    "n": 252,
+    "unidad_y": "valor SHAP del predictor P1144"
+  },
+  {
+    "grafico": 2,
+    "eje_x": "ratio distrital alumnos/docente en unidades originales",
+    "color": "P1144 original: internet en hogar",
+    "n": 252,
+    "unidad_y": "valor SHAP del predictor P1144"
+  }
+]

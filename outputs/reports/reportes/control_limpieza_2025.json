@@ -1,0 +1,35 @@
+{
+  "anio": "2025",
+  "fuentes": [
+    "ENAHO100",
+    "ENAHO200",
+    "ENAHO300",
+    "Sumaria",
+    "Padron",
+    "Padlocal"
+  ],
+  "personas_6_a_17_modulo200": 24195,
+  "excluidos_sin_modulo300": 550,
+  "sin_match_modulo100": 0,
+  "sin_match_sumaria": 0,
+  "filas_dataset_maestro": 23645,
+  "columnas_dataset_maestro": 74,
+  "duplicados_clave_persona": 0,
+  "distritos_enaho": 1240,
+  "conglomerados_enaho": 5049,
+  "distritos_escale_ebr": 1891,
+  "colegios_escale_ebr": 54038,
+  "filas_con_escale_distrito": 23645,
+  "filas_con_escale_area": 23210,
+  "desacuerdos_ubigeo_padron_padlocal": 1,
+  "observaciones": [
+    "Los CSV originales usan separador punto y coma y decimales con coma.",
+    "Las llaves y UBIGEO se mantienen en formato string.",
+    "Se conserva un registro por estudiante de 6 a 17 años con ENAHO 200 y 300.",
+    "Padron.dbf tiene TALUM/TDOC/TSEC; no TALUMNO/TDOCENTE/TSECCION como la guía.",
+    "No hay columna de altitud ni conectividad escolar en los dos DBF adjuntos.",
+    "No se imputó ni escaló a nivel global; se hará dentro de cada fold en ML.",
+    "P1144, P314A y los códigos escolares requieren contraste con el diccionario INEI.",
+    "La codificación urbano-rural derivada de ESTRATO requiere verificación con el catálogo oficial."
+  ]
+}

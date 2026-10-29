@@ -1,0 +1,13 @@
+{
+  "archivo": "Matricula_01_2025.dbf",
+  "registros_filtrados_c201_3ap_3as": 56474,
+  "servicios_matricula_cod_mod_anexo": 54038,
+  "servicios_enlazados_al_padron": 54038,
+  "servicios_sin_coincidencia": 0,
+  "proporcion_servicios_enlazados": 1.0,
+  "llave_matricula_padron": [
+    "COD_MOD",
+    "ANEXO"
+  ],
+  "llave_para_enaho": "No existe COD_MOD/CODLOCAL en los módulos ENAHO 2025 disponibles; agregación posterior por UBIGEO."
+}

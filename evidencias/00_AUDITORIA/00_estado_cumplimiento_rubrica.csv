@@ -1,0 +1,11 @@
+﻿criterio,estado,evidencia,limitacion
+Integración ENAHO 100/200/300/Sumaria,Parcial/verificado,"Dataset, código y resumen; llaves documentadas",No se recontaron etapas originales en esta exportación
+ESCALE matrícula 2025 enlazada con padrón,Verificado parcial,"54,038/54,038 servicios enlazados por COD_MOD+ANEXO",No permite identificar escuela ENAHO individual
+"Clustering, dos algoritmos y k 2–6",Verificado,"CSV métricas con Silhouette, DB, CH; PCA y silueta existentes",Perfiles exploratorios; faltan variables escolares ausentes
+PCA 2D,Verificado,Figura clusters_pca existente,"Figura de origen conservada, dpi de fuente no elevado"
+Clasificación baseline + tres modelos,Verificado,Comparación y GroupKFold guardados,Falta validación estadística por diseño muestral
+Test aislado por CONGLOME,Verificado,"auditoria_split_conglomerado.json, cero intersecciones",Registros son evidencia del pipeline guardado
+ROC/PR/matriz/calibración,Parcial,ROC/PR/calibración y matriz exportadas; curvas derivadas con modelo guardado,La recalibración es una derivación de auditoría; no reentrenamiento
+"SHAP summary, 2 dependencias, 2 casos",Parcial,Figuras y JSON existentes,Salida SHAP no declara escala explícitamente; casos anonimizados
+"Altitud, equipos, conectividad escolar",No verificable / ausente,Limitación explícita en auditoría y reportes,No inferir ni inventar
+Guía original PDF del docente,Consultada (7 páginas),"PDF encontrado en Downloads; cotejo de fases, requisitos y rúbrica máxima 20 puntos",La nota de entrega depende de evaluación docente; esta auditoría no predice calificación

@@ -1,0 +1,75 @@
+﻿variable,tipo,porcentaje_nulos,descripcion
+AÑO,string,0.0,Año de ENAHO; llave textual
+MES,string,0.0,Mes de entrevista; llave textual
+CONGLOME,string,0.0,Conglomerado INEI; grupo obligatorio para separar train/test
+VIVIENDA,string,0.0,"Identificador de vivienda, conservando ceros a la izquierda"
+HOGAR,string,0.0,"Identificador de hogar, conservando ceros a la izquierda"
+CODPERSO,string,0.0,"Identificador de persona, conservando ceros a la izquierda"
+UBIGEO,string,0.0,Código de distrito INEI de seis dígitos
+P203,string,0.0,Parentesco en el hogar codificado; requiere diccionario
+P207,string,0.0,Sexo codificado; requiere diccionario ENAHO
+P208A,string,0.0,Edad original del módulo ENAHO 200
+NCONGLOME,string,0.0,Identificador alternativo de conglomerado (ENAHO 200)
+EDAD,Int64,0.0,Edad numérica filtrada de 6 a 17 años
+P300A,string,0.0,Lengua materna codificada; requiere diccionario
+P306,string,0.11,Matrícula escolar codificada; requiere diccionario
+P307,string,14.24,Asistencia escolar codificada; requiere diccionario
+P308A,string,14.24,Nivel educativo codificado; requiere diccionario
+P308B,string,14.24,Año de estudios matriculado (secundaria); verificar diccionario INEI
+P308C,string,57.22,Grado de estudios matriculado (primaria); verificar diccionario INEI
+P314A,string,0.11,Uso de internet codificado; requiere diccionario
+P314B$1,string,27.35,Código original del componente de uso de internet: P314B$1
+P314B$2,string,27.35,Código original del componente de uso de internet: P314B$2
+P314B$3,string,27.35,Código original del componente de uso de internet: P314B$3
+P314B$4,string,27.35,Código original del componente de uso de internet: P314B$4
+P314B$5,string,27.35,Código original del componente de uso de internet: P314B$5
+P314B$6,string,27.35,Código original del componente de uso de internet: P314B$6
+P314B$7,string,27.35,Código original del componente de uso de internet: P314B$7
+P316$1,string,27.35,Código original del componente frecuencia/uso TIC: P316$1
+P316$2,string,27.35,Código original del componente frecuencia/uso TIC: P316$2
+P316$3,string,27.35,Código original del componente frecuencia/uso TIC: P316$3
+P316$4,string,27.35,Código original del componente frecuencia/uso TIC: P316$4
+P316$5,string,27.35,Código original del componente frecuencia/uso TIC: P316$5
+P316$6,string,27.35,Código original del componente frecuencia/uso TIC: P316$6
+P316$7,string,27.35,Código original del componente frecuencia/uso TIC: P316$7
+P316$8,string,27.35,Código original del componente frecuencia/uso TIC: P316$8
+P316$9,string,27.35,Código original del componente frecuencia/uso TIC: P316$9
+P316$10,string,27.35,Código original del componente frecuencia/uso TIC: P316$10
+P316$11,string,27.35,Código original del componente frecuencia/uso TIC: P316$11
+P316$12,string,27.35,Código original del componente frecuencia/uso TIC: P316$12
+DOMINIO,string,0.0,Dominio geográfico ENAHO
+ESTRATO,string,0.0,Estrato de ENAHO
+P1121,string,0.0,Alumbrado/servicio del hogar según guía; verificar código
+P1144,string,0.0,Internet del hogar según guía; verificar código y categoría
+MIEPERHO,Int64,0.0,Miembros por hogar en Sumaria
+INGHOG2D,Float64,0.0,"Ingreso del hogar de Sumaria, convertido de coma decimal"
+GASHOG2D,Float64,0.0,"Gasto del hogar de Sumaria, convertido de coma decimal"
+POBREZA,string,0.0,"Situación de pobreza codificada; 1 extremo, 2 no extremo, 3 no pobre (guía)"
+FACTOR07,Float64,0.0,Factor de expansión de Sumaria
+AREA_OPERATIVA_ENAHO,object,0.0,"1 urbano, 2 rural, aproximado desde ESTRATO (validar catálogo INEI)"
+ESCALE_DIST_N_COLEGIOS,int64,0.0,Indicador agregado de primaria/secundaria por distrito: N_COLEGIOS
+ESCALE_DIST_N_PUBLICOS,int64,0.0,Indicador agregado de primaria/secundaria por distrito: N_PUBLICOS
+ESCALE_DIST_N_PRIVADOS,int64,0.0,Indicador agregado de primaria/secundaria por distrito: N_PRIVADOS
+ESCALE_DIST_TOTAL_ALUMNOS,Int64,0.0,Indicador agregado de primaria/secundaria por distrito: TOTAL_ALUMNOS
+ESCALE_DIST_TOTAL_DOCENTES,Int64,0.0,Indicador agregado de primaria/secundaria por distrito: TOTAL_DOCENTES
+ESCALE_DIST_TOTAL_SECCIONES,Int64,0.0,Indicador agregado de primaria/secundaria por distrito: TOTAL_SECCIONES
+ESCALE_DIST_LAT_MEDIA,Float64,0.0,Indicador agregado de primaria/secundaria por distrito: LAT_MEDIA
+ESCALE_DIST_LON_MEDIA,Float64,0.0,Indicador agregado de primaria/secundaria por distrito: LON_MEDIA
+ESCALE_DIST_RATIO_ALUMNOS_DOCENTE,Float64,0.0,Indicador agregado de primaria/secundaria por distrito: RATIO_ALUMNOS_DOCENTE
+ESCALE_DIST_PROP_PUBLICOS,float64,0.0,Indicador agregado de primaria/secundaria por distrito: PROP_PUBLICOS
+ESCALE_DIST_PROP_PRIVADOS,float64,0.0,Indicador agregado de primaria/secundaria por distrito: PROP_PRIVADOS
+ESCALE_AREA_N_COLEGIOS,float64,1.84,Indicador agregado de primaria/secundaria por distrito y área: N_COLEGIOS
+ESCALE_AREA_N_PUBLICOS,float64,1.84,Indicador agregado de primaria/secundaria por distrito y área: N_PUBLICOS
+ESCALE_AREA_N_PRIVADOS,float64,1.84,Indicador agregado de primaria/secundaria por distrito y área: N_PRIVADOS
+ESCALE_AREA_TOTAL_ALUMNOS,Int64,1.84,Indicador agregado de primaria/secundaria por distrito y área: TOTAL_ALUMNOS
+ESCALE_AREA_TOTAL_DOCENTES,Int64,1.84,Indicador agregado de primaria/secundaria por distrito y área: TOTAL_DOCENTES
+ESCALE_AREA_TOTAL_SECCIONES,Int64,1.84,Indicador agregado de primaria/secundaria por distrito y área: TOTAL_SECCIONES
+ESCALE_AREA_LAT_MEDIA,Float64,1.84,Indicador agregado de primaria/secundaria por distrito y área: LAT_MEDIA
+ESCALE_AREA_LON_MEDIA,Float64,1.84,Indicador agregado de primaria/secundaria por distrito y área: LON_MEDIA
+ESCALE_AREA_RATIO_ALUMNOS_DOCENTE,Float64,1.84,Indicador agregado de primaria/secundaria por distrito y área: RATIO_ALUMNOS_DOCENTE
+ESCALE_AREA_PROP_PUBLICOS,float64,1.84,Indicador agregado de primaria/secundaria por distrito y área: PROP_PUBLICOS
+ESCALE_AREA_PROP_PRIVADOS,float64,1.84,Indicador agregado de primaria/secundaria por distrito y área: PROP_PRIVADOS
+TIENE_ESCALE_DISTRITO,bool,0.0,Indica si el UBIGEO tiene instituciones EBR en ESCALE
+TIENE_ESCALE_AREA,bool,0.0,Indica si hubo coincidencia por UBIGEO y área operativa
+INGRESO_POR_MIEMBRO,Float64,0.0,INGHOG2D / MIEPERHO (sin imputación)
+GASTO_POR_MIEMBRO,Float64,0.0,GASHOG2D / MIEPERHO (sin imputación)

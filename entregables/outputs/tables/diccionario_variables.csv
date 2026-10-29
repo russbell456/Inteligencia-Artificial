@@ -1,0 +1,110 @@
+variable,descripcion,tipo,faltantes_pct
+AÑO,Año de la encuesta ENAHO.,object,0.0
+MES,Mes de entrevista de la ENAHO.,object,0.0
+CONGLOME,Identificador del conglomerado muestral; unidad de separación entre entrenamiento y prueba.,object,0.0
+VIVIENDA,Identificador de vivienda dentro del conglomerado.,object,0.0
+HOGAR,Identificador de hogar dentro de la vivienda.,object,0.0
+UBIGEO,Código geográfico de ubicación; llave para agregar contexto ESCALE distrital.,object,0.0
+CODPERSO,Identificador de persona dentro del hogar.,object,0.0
+P203,Relación de parentesco con la persona de referencia del hogar.,int64,0.0
+P207,Sexo de la persona entrevistada.,int64,0.0
+P208A,Edad en años cumplidos.,float64,0.0
+P300A,"Lengua materna aprendida en la niñez: 1=quechua, 2=aimara, 3=otra nativa, 4=castellano, 6=portugués, 7=otra extranjera, 8=no escucha/habla, 9=lengua de señas, 10=ashaninka, 11=awajún/awarún, 12=shipibo-konibo, 13=shawi, 14=matsigenka, 15=achuar.",int64,0.0
+P306,"Matrícula en un centro o programa educativo durante el año de referencia (1=sí, 2=no).",float64,0.0
+P307,"Asistencia actual a un centro o programa educativo (1=sí, 2=no); define población y se excluye de predictores.",float64,0.0
+P308A,"Nivel en que está matriculada la persona (1=inicial, 2=primaria, 3=secundaria, 4=superior no universitaria, 5=universitaria, 6=maestría/doctorado, 7=básica especial).",float64,0.0
+P308B,Año/grado de estudios en que está matriculada la persona.,float64,0.0
+P308C,Grado de estudios de primaria; se usa junto con P308B para edad normativa y rezago.,float64,50.19
+P314A,"Uso de Internet durante el mes anterior (1=sí, 2=no); define el resultado y se excluye de predictores.",float64,0.0
+FACTOR07,Factor anual de expansión ENAHO basado en proyecciones CPV-2007; ponderador cuando el estimador lo admite.,float64,0.0
+P314D,"Frecuencia de uso de Internet: 1=diaria, 2=semanal, 3=mensual, 4=cada dos meses o más; solo usuarios.",float64,25.64
+P316B,"Uso de computadora, laptop, tablet o similar en los últimos tres meses (1=sí, 2=no).",float64,66.64
+P314B$1,"Código de respuesta de lugar de uso de Internet: 1 corresponde a hogar; 0=no marcó el lugar; descriptiva, excluida del modelo por condicionarse al uso.",float64,25.64
+P314B$2,"Código de respuesta de lugar de uso de Internet: 2 corresponde a trabajo; 0=no marcó el lugar; descriptiva, excluida del modelo por condicionarse al uso.",float64,25.64
+P314B$3,"Código de respuesta de lugar de uso de Internet: 3 corresponde a centro_educativo; 0=no marcó el lugar; descriptiva, excluida del modelo por condicionarse al uso.",float64,25.64
+P314B$4,"Código de respuesta de lugar de uso de Internet: 4 corresponde a cabina_publica; 0=no marcó el lugar; descriptiva, excluida del modelo por condicionarse al uso.",float64,25.64
+P314B$5,"Código de respuesta de lugar de uso de Internet: 5 corresponde a casa_otra_persona; 0=no marcó el lugar; descriptiva, excluida del modelo por condicionarse al uso.",float64,25.64
+P314B$6,"Código de respuesta de lugar de uso de Internet: 6 corresponde a otro_lugar; 0=no marcó el lugar; descriptiva, excluida del modelo por condicionarse al uso.",float64,25.64
+P314B$7,"Código de respuesta de lugar de uso de Internet: 7 corresponde a acceso_movil; 0=no marcó el lugar; descriptiva, excluida del modelo por condicionarse al uso.",float64,25.64
+P316$1,"Ítem 1 de propósito de uso de Internet (1=sí, 2=no); descriptivo, excluido del modelo por riesgo de fuga.",float64,25.64
+P316$2,"Ítem 2 de propósito de uso de Internet (1=sí, 2=no); descriptivo, excluido del modelo por riesgo de fuga.",float64,25.64
+P316$3,"Ítem 3 de propósito de uso de Internet (1=sí, 2=no); descriptivo, excluido del modelo por riesgo de fuga.",float64,25.64
+P316$4,"Ítem 4 de propósito de uso de Internet (1=sí, 2=no); descriptivo, excluido del modelo por riesgo de fuga.",float64,25.64
+P316$5,"Ítem 5 de propósito de uso de Internet (1=sí, 2=no); descriptivo, excluido del modelo por riesgo de fuga.",float64,25.64
+P316$6,"Ítem 6 de propósito de uso de Internet (1=sí, 2=no); descriptivo, excluido del modelo por riesgo de fuga.",float64,25.64
+P316$7,"Ítem 7 de propósito de uso de Internet (1=sí, 2=no); descriptivo, excluido del modelo por riesgo de fuga.",float64,25.64
+P316$8,"Ítem 8 de propósito de uso de Internet (1=sí, 2=no); descriptivo, excluido del modelo por riesgo de fuga.",float64,25.64
+P316$9,"Ítem 9 de propósito de uso de Internet (1=sí, 2=no); descriptivo, excluido del modelo por riesgo de fuga.",float64,25.64
+P316$10,"Ítem 10 de propósito de uso de Internet (1=sí, 2=no); descriptivo, excluido del modelo por riesgo de fuga.",float64,25.64
+P316$11,"Ítem 11 de propósito de uso de Internet (1=sí, 2=no); descriptivo, excluido del modelo por riesgo de fuga.",float64,25.64
+P316$12,"Ítem 12 de propósito de uso de Internet (1=sí, 2=no); descriptivo, excluido del modelo por riesgo de fuga.",float64,25.64
+P316C1,"Tarea informática de habilidades digitales declarada (P316C1, 1=sí, 2=no); contribuye al conteo predictor exploratorio.",float64,85.57
+P316C2,"Tarea informática de habilidades digitales declarada (P316C2, 1=sí, 2=no); contribuye al conteo predictor exploratorio.",float64,85.57
+P316C3,"Tarea informática de habilidades digitales declarada (P316C3, 1=sí, 2=no); contribuye al conteo predictor exploratorio.",float64,85.57
+P316C4,"Tarea informática de habilidades digitales declarada (P316C4, 1=sí, 2=no); contribuye al conteo predictor exploratorio.",float64,85.57
+P316C5,"Tarea informática de habilidades digitales declarada (P316C5, 1=sí, 2=no); contribuye al conteo predictor exploratorio.",float64,85.57
+P316C6,"Tarea informática de habilidades digitales declarada (P316C6, 1=sí, 2=no); contribuye al conteo predictor exploratorio.",float64,85.57
+P316C7,"Tarea informática de habilidades digitales declarada (P316C7, 1=sí, 2=no); contribuye al conteo predictor exploratorio.",float64,85.57
+P316C8,"Tarea informática de habilidades digitales declarada (P316C8, 1=sí, 2=no); contribuye al conteo predictor exploratorio.",float64,85.57
+P316C9,"Tarea informática de habilidades digitales declarada (P316C9, 1=sí, 2=no); contribuye al conteo predictor exploratorio.",float64,85.57
+P316C10,"Tarea informática de habilidades digitales declarada (P316C10, 1=sí, 2=no); contribuye al conteo predictor exploratorio.",float64,85.57
+DOMINIO,Dominio geográfico de la muestra ENAHO.,object,0.0
+ESTRATO,Estrato muestral ENAHO; base de la derivación del indicador rural.,object,0.0
+P110,"Fuente principal de abastecimiento de agua del hogar; según diccionario, códigos 1 y 2 representan red pública.",int64,0.0
+P110A1,"Hogar tiene agua potable (1=sí, 2=no).",float64,16.69
+P111A,Tipo de servicio higiénico del hogar; códigos 1 y 2 representan conexión a red pública.,int64,0.0
+P1121,"Indicador de alumbrado del hogar mediante electricidad (0=no, 1=sí); no representa acceso a Internet.",int64,0.0
+P1144,"Indicador de conexión a Internet fija o móvil en el hogar (0=no, 1=sí).",int64,0.0
+MIEPERHO,Número de miembros del hogar.,int64,0.0
+TOTMIEHO,Total de miembros del hogar según Sumaria.,int64,0.0
+GASHOG2D,Gasto total del hogar según Sumaria.,float64,0.0
+INGHOG2D,Ingreso total del hogar según Sumaria.,float64,0.0
+POBREZA,Condición de pobreza monetaria del hogar según Sumaria.,int64,0.0
+esc_n_escuelas,Número de COD_MOD distintos en UBIGEO.,int64,0.0
+esc_alumnos,Suma de TALUM en padrón agregado por UBIGEO.,int64,0.0
+esc_docentes,Suma de TDOC en padrón agregado por UBIGEO.,int64,0.0
+esc_secciones,Suma de TSEC en padrón agregado por UBIGEO.,int64,0.0
+esc_prop_gestion_publica,Proporción de registros cuya etiqueta D_GESTION indica gestión pública; NA/0 si el rótulo no está disponible.,float64,0.0
+esc_lat_media,"Media de NLAT_IE de instituciones del distrito, cuando está disponible.",float64,0.0
+esc_lon_media,"Media de NLONG_IE de instituciones del distrito, cuando está disponible.",float64,0.0
+esc_ratio_alumno_docente,Alumnos / docentes agregados del distrito.,float64,0.0
+esc_matricula_primaria_2025,"Suma distrital del Censo Educativo 2025: C201/3AP (matrícula primaria por grado, sexo y turno), enlazada al padrón por COD_MOD+ANEXO.",float64,0.0
+esc_matricula_secundaria_2025,"Suma distrital del Censo Educativo 2025: C201/3AS (matrícula secundaria por grado, sexo y turno), enlazada al padrón por COD_MOD+ANEXO.",float64,0.0
+esc_n_locales_padlocal,Número de CODLOCAL distintos observados en Padlocal.dbf por UBIGEO.,float64,0.0
+edad,Edad en años cumplidos (P208A).,float64,0.0
+internet_hogar,Variable original ENAHO/ESCALE; ver diccionario anual de la fuente.,int64,0.0
+exclusion_digital,"Indicador: 1=P314A 2 (no usó Internet el mes anterior), 0=P314A 1; población con P307=1 y 6-17 años.",int8,0.0
+grado_ebr,Grado válido de primaria (P308C) o secundaria (P308B).,float64,4.13
+edad_normativa,Edad normativa derivada: primaria grado+5; secundaria grado+11.,float64,4.13
+rezago_escolar_anios,"Años de edad por encima de la edad normativa del grado, truncados a cero; faltante si no hay grado válido.",float64,4.13
+rezago_escolar,Indicador de rezago: edad mayor que la edad normativa; faltante si no hay grado válido.,Int8,4.13
+agua_potable,Indicador de agua potable derivado de P110A1; los demás códigos quedan faltantes.,float64,16.69
+agua_red_publica,Indicador derivado de P110: fuente de agua en red pública (códigos 1/2).,float64,0.0
+saneamiento_red_publica,Indicador derivado de P111A: servicio higiénico conectado a red pública (códigos 1/2).,float64,0.0
+tic_frecuencia_uso_cluster,"Perfilamiento: P314D (1 diaria, 2 semanal, 3 mensual, 4 cada dos meses o más); 0 si P314A reporta no uso. No se usa en clasificación supervisada.",float64,0.0
+tic_lugar_1,"Uso de Internet en hogar, derivado de P314B$1; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_lugar_2,"Uso de Internet en trabajo, derivado de P314B$2; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_lugar_3,"Uso de Internet en centro_educativo, derivado de P314B$3; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_lugar_4,"Uso de Internet en cabina_publica, derivado de P314B$4; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_lugar_5,"Uso de Internet en casa_otra_persona, derivado de P314B$5; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_lugar_6,"Uso de Internet en otro_lugar, derivado de P314B$6; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_lugar_7,"Uso de Internet en acceso_movil, derivado de P314B$7; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_proposito_1,"Propósito de uso de Internet, respuesta afirmativa a P316$1; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_proposito_2,"Propósito de uso de Internet, respuesta afirmativa a P316$2; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_proposito_3,"Propósito de uso de Internet, respuesta afirmativa a P316$3; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_proposito_4,"Propósito de uso de Internet, respuesta afirmativa a P316$4; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_proposito_5,"Propósito de uso de Internet, respuesta afirmativa a P316$5; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_proposito_6,"Propósito de uso de Internet, respuesta afirmativa a P316$6; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_proposito_7,"Propósito de uso de Internet, respuesta afirmativa a P316$7; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_proposito_8,"Propósito de uso de Internet, respuesta afirmativa a P316$8; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_proposito_9,"Propósito de uso de Internet, respuesta afirmativa a P316$9; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_proposito_10,"Propósito de uso de Internet, respuesta afirmativa a P316$10; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_proposito_11,"Propósito de uso de Internet, respuesta afirmativa a P316$11; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_proposito_12,"Propósito de uso de Internet, respuesta afirmativa a P316$12; descriptivo entre usuarios, excluido del modelo supervisado.",Int8,0.0
+tic_habilidades_digitales_n,"Conteo de tareas informáticas afirmativas reportadas (P316C1-P316C10); predictor exploratorio aproximado, no evaluación de competencia certificada.",float64,85.57
+tic_uso_computadora_ult3m,"Uso de computadora/laptop/tablet en los últimos tres meses (derivado de P316B; 1=sí, 0=no).",float64,66.64
+ingreso_hogar_percapita,INGHOG2D / MIEPERHO.,float64,0.0
+gasto_hogar_percapita,GASHOG2D / MIEPERHO.,float64,0.0
+rural,"Indicador derivado: estratos 6, 7 u 8; verificar codificación anual del marco muestral.",int8,0.0
+grupo_conglomerado,CONGLOME conservado como texto; grupo de partición para evitar solapamiento entre train/test.,string,0.0
+factor_expansion,FACTOR07 del módulo Sumaria/educación usado como peso cuando existe.,float64,0.0

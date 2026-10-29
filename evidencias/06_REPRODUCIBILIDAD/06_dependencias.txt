@@ -1,0 +1,14 @@
+Python 3.12.14
+pandas==2.3.3
+numpy==2.5.4
+scikit-learn==1.9.1
+matplotlib==3.11.2
+seaborn==0.13.2
+pyarrow==26.0.0
+joblib==1.6.0
+shap==0.54.1
+dbfread==2.0.7
+jupyterlab==4.6.4
+ipykernel==7.4.0
+openpyxl: no instalado en .venv
+Dependencias originales: ../entregables/requirements-lock.txt (no modificadas).

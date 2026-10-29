@@ -1,0 +1,14 @@
+{
+  "fase": "02_validacion_objetivo_rezago",
+  "anio": 2025,
+  "registros_total": 23645,
+  "columnas": 81,
+  "duplicados_persona": 0,
+  "universo_elegible": 17249,
+  "fuera_del_universo": 6396,
+  "rezago_1": 7117,
+  "rezago_0": 10132,
+  "regla": "matriculado y asistente 6-17; primaria grado=P308C 1-6 edad normativa=grado+5, secundaria anio=P308B 1-5 edad normativa=anio+11; 1 si edad>normativa",
+  "nota": "Regla operativa, no estimacion oficial. Revisar diccionario ENAHO 2025 y diseño muestral. Sin imputacion antes del split; futuros modelos deben dividir por CONGLOME.",
+  "dataset_maestro": "C:\\Users\\Russbell\\Downloads\\inteligenciaartificial\\datamodulos\\data_limpia\\data\\processed\\dataset_enaho_escale_2025.csv"
+}

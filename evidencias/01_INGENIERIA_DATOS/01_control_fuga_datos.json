@@ -1,0 +1,20 @@
+{
+  "split": {
+    "split": "GroupShuffleSplit",
+    "test_size": 0.2,
+    "semilla": 42,
+    "n_train": 14407,
+    "n_test": 3585,
+    "conglomerados_train": 3292,
+    "conglomerados_test": 824,
+    "conglomerados_compartidos_train_test": [],
+    "separacion_confirmada": true,
+    "prevalencia_train": 0.2589019226764767,
+    "prevalencia_test": 0.24658298465829848
+  },
+  "separacion_conglomerados_confirmada": true,
+  "preprocesamiento": "Pipeline scikit-learn aplica imputación, one-hot y escalado dentro del estimador/folds según código src/pipeline.py.",
+  "target_excluido_de_predictores": "el código define predictores sin P307 ni P314A; exclusión de campos outcome confirmada por función feature_columns.",
+  "variables_postresultado": "P314B/P316 descriptivas; P314D solo clustering; no usadas en clasificación según código y resumen de ejecución.",
+  "limitacion_verificacion": "Se verifican código y registro de split guardado; no se rehace el entrenamiento ni se exportan predicciones individuales."
+}

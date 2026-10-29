@@ -1,0 +1,60 @@
+{
+  "fase": "03_clustering_exploratorio",
+  "anio": 2025,
+  "semilla": 42,
+  "metodos_comparados": [
+    "KMeans",
+    "GMM"
+  ],
+  "k_comparados": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "seleccion": {
+    "metodo": "KMeans",
+    "k": 2,
+    "silueta_muestra": 0.2720591127872467,
+    "davies_bouldin_muestra": 1.505820146766573,
+    "calinski_harabasz_muestra": 807.9007480966015
+  },
+  "registros": 23645,
+  "columnas": 82,
+  "duplicados_personas": 0,
+  "tamanos_cluster": {
+    "0": 13872,
+    "1": 9773
+  },
+  "muestra_metricas": 2000,
+  "predictores_numericos": [
+    "INGRESO_POR_MIEMBRO",
+    "GASTO_POR_MIEMBRO",
+    "ESCALE_DIST_RATIO_ALUMNOS_DOCENTE",
+    "ESCALE_DIST_PROP_PUBLICOS",
+    "ESCALE_DIST_N_COLEGIOS"
+  ],
+  "predictores_categoricos": [
+    "POBREZA",
+    "AREA_OPERATIVA_ENAHO",
+    "INTERNET_HOGAR",
+    "ELECTRICIDAD_HOGAR",
+    "USO_INTERNET_MES",
+    "P300A_AGRUPADA"
+  ],
+  "prohibido_en_supervisado": [
+    "CLUSTER_PERFIL",
+    "REZAGO_ESCOLAR",
+    "GRADO_EBR",
+    "EDAD_NORMATIVA",
+    "EDAD",
+    "P308A",
+    "P308B",
+    "P308C",
+    "CONGLOME",
+    "UBIGEO",
+    "CODPERSO"
+  ],
+  "advertencia": "Clustering descriptivo de datos completos, sin uso como predictor en evaluación supervisada. Variables TIC deben contrastarse con diccionarios oficiales. Sin ponderaciones muestrales."
+}

@@ -1,0 +1,49 @@
+{
+  "estado": "verificado desde Parquet procesado",
+  "archivo_origen": "entregables/data/processed/dataset_enaho_escale_2025.parquet",
+  "filas": 17992,
+  "columnas": 109,
+  "duplicados_exactos": 0,
+  "duplicados_llave_persona": 0,
+  "llave_persona_usada": [
+    "AÑO",
+    "MES",
+    "CONGLOME",
+    "VIVIENDA",
+    "HOGAR",
+    "UBIGEO",
+    "CODPERSO"
+  ],
+  "nulos_totales": 303620,
+  "columnas_con_nulos": 40,
+  "top_nulos": {
+    "P316C4": 15396,
+    "P316C1": 15396,
+    "P316C2": 15396,
+    "P316C6": 15396,
+    "P316C5": 15396,
+    "P316C3": 15396,
+    "P316C9": 15396,
+    "P316C8": 15396,
+    "tic_habilidades_digitales_n": 15396,
+    "P316C10": 15396,
+    "P316C7": 15396,
+    "tic_uso_computadora_ult3m": 11989,
+    "P316B": 11989,
+    "P308C": 9030,
+    "P316$9": 4614,
+    "P316$10": 4614,
+    "P316$7": 4614,
+    "P316$2": 4614,
+    "P316$1": 4614,
+    "P316$3": 4614
+  },
+  "target": "exclusion_digital: población escolar 6–17 años asistente (P307=1) con respuesta válida P314A; 1=P314A 2 (sin uso reciente), 0=P314A 1",
+  "prevalencia_target": 0.256447309915518,
+  "conglomerados": 4116,
+  "fuentes_integradas": [
+    "ENAHO módulos 100, 200, 300, Sumaria",
+    "ESCALE matrícula 2025, Padrón, Padlocal, agregación distrital UBIGEO"
+  ],
+  "limitacion_registros_fuente": "No se recalcularon aquí los conteos completos por etapa desde los CSV fuente; se preservan filtros descritos por pipeline y se registran los conteos no disponibles como pendiente."
+}

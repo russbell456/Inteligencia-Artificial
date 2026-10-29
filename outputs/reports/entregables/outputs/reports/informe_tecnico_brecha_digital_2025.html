@@ -1,0 +1,470 @@
+<!doctype html><html lang='es'><meta charset='utf-8'><title>Informe ENAHO–ESCALE 2025</title><style>body{font:16px/1.55 Georgia,serif;max-width:960px;margin:3rem auto;padding:0 2rem;color:#18212b}h1,h2,h3{font-family:Arial,sans-serif;color:#17324d}table{border-collapse:collapse;width:100%;font:14px Arial}td,th{border:1px solid #ccd5df;padding:.45rem}th{background:#eef3f8}code{background:#f1f3f5;padding:.1rem .25rem}</style><body><h1>Brecha digital y educación en Perú: análisis exploratorio y predicción con ENAHO–ESCALE 2025</h1>
+<p><strong>Informe técnico tipo artículo científico · Corte de datos: ENAHO 2025 · Semilla: 42</strong></p>
+<h2>Resumen</h2>
+<p>Este estudio construye un pipeline reproducible para integrar microdatos de hogares y personas de la Encuesta Nacional de Hogares (ENAHO) 2025 con información del padrón escolar ESCALE disponible en la carpeta de trabajo. La población analítica está conformada por personas de 6 a 17 años con asistencia escolar reportada y dato válido sobre uso de Internet. Se define un indicador observable de exclusión de uso digital como no haber utilizado Internet durante el mes anterior. La ejecución produjo <strong>17,992 observaciones</strong>, <strong>4,116 conglomerados</strong> y una prevalencia de resultado positivo de <strong>25.6%</strong>. Se comparan perfiles no supervisados mediante K-Means y agrupamiento aglomerativo, y cuatro clasificadores mediante validación cruzada GroupKFold y prueba aislada por conglomerado. La mejor media de validación cruzada corresponde a <strong>RandomForest</strong>; en la prueba agrupada obtuvo ROC-AUC=0.828, PR-AUC=0.571 y F1 macro=0.712. La interpretación debe circunscribirse al uso reciente de Internet: no equivale a una medición directa de competencias digitales ni identifica efectos causales.</p>
+<p><strong>Palabras clave:</strong> brecha digital; educación; ENAHO; ESCALE; aprendizaje automático; validación agrupada; explicabilidad.</p>
+<h2>1. Introducción</h2>
+<p>El acceso y uso de tecnologías de información pueden condicionar las oportunidades educativas, especialmente en hogares con menores recursos y en ámbitos rurales. Para orientar la priorización de intervenciones es necesario describir de manera conjunta las características de los escolares, sus hogares y el contexto de oferta educativa. La guía del proyecto propone integrar información ENAHO y ESCALE, descubrir tipologías con aprendizaje no supervisado y evaluar modelos predictivos con prevención explícita de fuga de información.</p>
+<p>El objetivo de este análisis es construir y documentar un flujo verificable de preparación, caracterización, clasificación y explicación algorítmica con los archivos que estaban disponibles al ejecutar el proyecto. La pregunta predictiva concreta es: <strong>entre escolares asistentes de 6 a 17 años con respuesta válida, ¿qué tan bien pueden ordenarse los casos según no haber usado Internet el mes previo usando características observadas de la persona, el hogar y el distrito?</strong> Esta formulación evita presentar como variable observada una noción más amplia de competencia digital que los archivos no miden.</p>
+<h2>2. Datos y metodología</h2>
+<h3>2.1 Fuentes y unidad de análisis</h3>
+<p>Se leyeron los módulos ENAHO 100 (vivienda/hogar), 200 (miembros), 300 (educación y TIC) y Sumaria 2025. El módulo personal se restringió a edades de 6 a 17 años y se enlazó por AÑO, MES, CONGLOME, VIVIENDA, HOGAR, UBIGEO y CODPERSO. Los archivos de hogar se enlazaron por las mismas llaves sin CODPERSO. Antes de unir, se preservaron como texto las llaves y los códigos geográficos para conservar ceros a la izquierda; la lectura usa codificación Latin-1 y convierte las celdas compuestas únicamente por espacios en valores ausentes. Los cruces tienen validaciones de cardinalidad para evitar duplicaciones silenciosas.</p>
+<p>El padrón <code>Padron.dbf</code> se convirtió a registros tabulares y se resumió por UBIGEO. Se calcularon conteos y sumas de instituciones, alumnos, docentes y secciones; proporción administrativa pública; medias de coordenadas del padrón cuando son numéricas; y ratio alumnos/docente. La matrícula 2025 se enlazó al padrón por <code>COD_MOD + ANEXO</code> y se agregó por UBIGEO; la cobertura de ese cruce está en la auditoría. El <code>Padlocal.dbf</code> existente se incorporó para contar locales educativos por UBIGEO y auditar CODLOCAL contra <code>Padron.dbf</code>; no aporta coordenadas numéricas ni altitud. ENAHO tampoco tiene <code>COD_MOD</code>/<code>CODLOCAL</code>, así que ESCALE caracteriza el distrito y no la institución de cada estudiante. Los archivos existentes no permiten añadir altitud, equipos informáticos o conectividad escolar: no se imputan ni infieren.</p>
+<p>El esquema de integración es: <strong>Módulo 200 + Módulo 300</strong> por llaves de persona → <strong>Módulo 100 + Sumaria</strong> por llaves de hogar → <strong>indicadores ESCALE</strong> por UBIGEO → tabla analítica filtrada por edad, asistencia y respuesta TIC.</p>
+<p><img alt="Diagrama de cruce de tablas" src="../figures/diagrama_cruce_tablas.png" /></p>
+<h3>2.2 Variables y resultado</h3>
+<p>El resultado binario <code>exclusion_digital</code> vale 1 cuando P314A=2 (no usó Internet durante el mes anterior) y 0 cuando P314A=1. Se incluyen solamente casos con P307=1 (asistencia reportada) y P314A válido. La prevalencia observada en la muestra analítica es 25.6%. Se construyeron ingreso y gasto del hogar por miembro, ruralidad derivada del estrato, indicadores de agua potable, red pública de agua y saneamiento, electricidad doméstica, años de rezago escolar con edades normativas de primaria y secundaria, y características distritales de ESCALE. Los predictores categóricos y continuos se documentan en el diccionario de variables generado con el dataset.</p>
+<p>Se incorporaron P314B (lugares de uso), P314D (frecuencia), P316 (propósitos), P316B (uso reciente de computadora/tablet) y P316C1–P316C10 (tareas informáticas que sirven como aproximación de habilidades digitales). Las distribuciones por código, faltantes y porcentajes ponderados se guardan en <code>outputs/tables/resumen_variables_tic_enaho.csv</code>. P314B y P316 se describen, y P314D se usa además como variable de perfilamiento no supervisado (0=no uso; 1–4=frecuencia observada). Las tres quedan excluidas de los predictores de clasificación por su condicionamiento al uso de Internet y riesgo de fuga. P316B y el conteo de tareas P316C se exploran como predictores, con imputación y marcadores de faltante dentro del pipeline. Este conteo representa tareas declaradas, no una certificación de competencia.</p>
+<p>Los códigos se cotejaron con el Diccionario ENAHO 2025 disponible en el proyecto. P1121 representa electricidad doméstica y no se interpreta como Internet. El tratamiento de faltantes se evidencia en <code>outputs/tables/diccionario_variables.csv</code> (porcentaje por variable), <code>resumen_variables_tic_enaho.csv</code> (N válido y faltante por ítem) y el <code>SimpleImputer(add_indicator=True)</code> ajustado dentro de cada fold. En P316B y en el conteo P316C hay faltantes altos, consistentes con preguntas condicionadas y saltos del cuestionario; no se interpretan como respuesta "no". El pipeline conserva el faltante, añade el indicador correspondiente y lo imputa dentro de cada fold.</p>
+<table>
+<thead>
+<tr>
+<th>Variable analítica</th>
+<th style="text-align: right;">Faltantes (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>variable</td>
+<td style="text-align: right;">faltantes_pct</td>
+</tr>
+<tr>
+<td>:----------------------------</td>
+<td style="text-align: right;">----------------:</td>
+</tr>
+<tr>
+<td>P1144</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr>
+<td>P314A</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr>
+<td>P314D</td>
+<td style="text-align: right;">25.6</td>
+</tr>
+<tr>
+<td>agua_potable</td>
+<td style="text-align: right;">16.7</td>
+</tr>
+<tr>
+<td>esc_matricula_primaria_2025</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr>
+<td>esc_n_locales_padlocal</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr>
+<td>esc_ratio_alumno_docente</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr>
+<td>rezago_escolar_anios</td>
+<td style="text-align: right;">4.1</td>
+</tr>
+<tr>
+<td>saneamiento_red_publica</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr>
+<td>tic_frecuencia_uso_cluster</td>
+<td style="text-align: right;">0.0</td>
+</tr>
+<tr>
+<td>tic_habilidades_digitales_n</td>
+<td style="text-align: right;">85.6</td>
+</tr>
+<tr>
+<td>tic_uso_computadora_ult3m</td>
+<td style="text-align: right;">66.6</td>
+</tr>
+</tbody>
+</table>
+<h3>2.3 Prevención de fuga de datos y evaluación</h3>
+<p>Se fijó random_state=42. Un <code>GroupShuffleSplit</code> aisló el 20% de los datos por CONGLOME para prueba. Dentro del conjunto de entrenamiento se utilizó GroupKFold con hasta tres folds, de forma que observaciones del mismo conglomerado no aparezcan a la vez en ajuste y validación. La imputación mediana/moda, el escalado y la codificación one-hot están encapsulados en un <code>Pipeline</code> y se ajustan de nuevo dentro de cada fold. P307 y P314A se excluyeron de la matriz de predictores, pues se usan para determinar la población o el objetivo. Las clases se balancean mediante class_weight cuando el estimador lo admite y FACTOR07 pondera el ajuste y los estimadores/métricas con soporte.</p>
+<p>La comparación incluye regresión logística balanceada como línea base, Random Forest, Extra Trees e HistGradientBoosting. Para los tres modelos avanzados se compara una cuadrícula pequeña de hiperparámetros candidatos mediante GroupKFold ponderado; FACTOR07 pondera el ajuste y las métricas. En cada fold se calculan ROC-AUC, PR-AUC y F1 macro ponderados; <code>outputs/tables/cv_groupkfold_modelos.csv</code> conserva los resultados por fold, tamaño de muestra, número de conglomerados y prevalencia. Se generan matrices de confusión (conteos y ponderada), curvas ROC/PR, calibración ponderada y Brier score. <code>auditoria_split_conglomerado.json</code> demuestra cero conglomerados compartidos entre entrenamiento y prueba. El test por conglomerado permanece aislado durante la selección.</p>
+<h3>2.4 Agrupamiento y explicabilidad</h3>
+<p>La muestra reproducible de hasta 4 000 observaciones se transforma con imputación, escalado y codificación. Las métricas se calculan en los primeros 20 componentes principales y la figura presenta dos componentes; la varianza explicada queda en <code>outputs/tables/pca_varianza.csv</code>. Se probaron K-Means y AgglomerativeClustering para k=2…6, y la solución seleccionada también se muestra con su gráfico de silueta. UBIGEO se excluyó para que el clustering no forme perfiles por código distrital. Las variables incluyen ingreso y gasto per cápita, ratio alumnos/docente distrital, frecuencia TIC ordinal (P314D; 0 para no uso), años de rezago y servicios básicos. P314D entra solo al clustering; permanece excluida de predictores supervisados por ser una pregunta condicionada al uso. Los nombres exploratorios comparan ruralidad y no uso con el promedio analítico y se respaldan con las medias de la tabla, sin validación externa.</p>
+<table>
+<thead>
+<tr>
+<th>Algoritmo</th>
+<th style="text-align: right;">k</th>
+<th style="text-align: right;">Silhouette</th>
+<th style="text-align: right;">Davies–Bouldin</th>
+<th style="text-align: right;">Calinski–Harabasz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>algoritmo</td>
+<td style="text-align: right;">k</td>
+<td style="text-align: right;">silhouette</td>
+<td style="text-align: right;">davies_bouldin</td>
+<td style="text-align: right;">calinski_harabasz</td>
+</tr>
+<tr>
+<td>:--------------</td>
+<td style="text-align: right;">----:</td>
+<td style="text-align: right;">-------------:</td>
+<td style="text-align: right;">-----------------:</td>
+<td style="text-align: right;">--------------------:</td>
+</tr>
+<tr>
+<td>KMeans</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.307</td>
+<td style="text-align: right;">1.407</td>
+<td style="text-align: right;">750.359</td>
+</tr>
+<tr>
+<td>Agglomerative</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.212</td>
+<td style="text-align: right;">1.808</td>
+<td style="text-align: right;">595.688</td>
+</tr>
+<tr>
+<td>KMeans</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.123</td>
+<td style="text-align: right;">2.248</td>
+<td style="text-align: right;">637.208</td>
+</tr>
+<tr>
+<td>Agglomerative</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.188</td>
+<td style="text-align: right;">2.173</td>
+<td style="text-align: right;">504.382</td>
+</tr>
+<tr>
+<td>KMeans</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.135</td>
+<td style="text-align: right;">2.055</td>
+<td style="text-align: right;">583.150</td>
+</tr>
+<tr>
+<td>Agglomerative</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.137</td>
+<td style="text-align: right;">2.210</td>
+<td style="text-align: right;">464.821</td>
+</tr>
+<tr>
+<td>KMeans</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.138</td>
+<td style="text-align: right;">1.904</td>
+<td style="text-align: right;">559.107</td>
+</tr>
+<tr>
+<td>Agglomerative</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.156</td>
+<td style="text-align: right;">1.912</td>
+<td style="text-align: right;">457.003</td>
+</tr>
+<tr>
+<td>KMeans</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.137</td>
+<td style="text-align: right;">1.867</td>
+<td style="text-align: right;">510.019</td>
+</tr>
+<tr>
+<td>Agglomerative</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.159</td>
+<td style="text-align: right;">1.745</td>
+<td style="text-align: right;">450.395</td>
+</tr>
+</tbody>
+</table>
+<p>La composición se describe con conteo de casos y medias observadas, incluyendo ruralidad, Internet del hogar, habilidades declaradas y no uso del mes anterior:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">cluster</th>
+<th style="text-align: left;">nombre_perfil</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">edad</th>
+<th style="text-align: right;">grado_ebr</th>
+<th style="text-align: right;">rezago_escolar_anios</th>
+<th style="text-align: right;">P1121</th>
+<th style="text-align: right;">P1144</th>
+<th style="text-align: right;">agua_potable</th>
+<th style="text-align: right;">agua_red_publica</th>
+<th style="text-align: right;">saneamiento_red_publica</th>
+<th style="text-align: right;">MIEPERHO</th>
+<th style="text-align: right;">POBREZA</th>
+<th style="text-align: right;">ingreso_hogar_percapita</th>
+<th style="text-align: right;">gasto_hogar_percapita</th>
+<th style="text-align: right;">esc_n_escuelas</th>
+<th style="text-align: right;">esc_alumnos</th>
+<th style="text-align: right;">esc_n_locales_padlocal</th>
+<th style="text-align: right;">esc_docentes</th>
+<th style="text-align: right;">esc_secciones</th>
+<th style="text-align: right;">esc_prop_gestion_publica</th>
+<th style="text-align: right;">esc_lat_media</th>
+<th style="text-align: right;">esc_lon_media</th>
+<th style="text-align: right;">esc_ratio_alumno_docente</th>
+<th style="text-align: right;">esc_matricula_primaria_2025</th>
+<th style="text-align: right;">esc_matricula_secundaria_2025</th>
+<th style="text-align: right;">rural</th>
+<th style="text-align: right;">tic_habilidades_digitales_n</th>
+<th style="text-align: right;">tic_uso_computadora_ult3m</th>
+<th style="text-align: right;">tic_frecuencia_uso_cluster</th>
+<th style="text-align: right;">exclusion_digital</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">Mayor ruralidad y no uso cercano al promedio (exploratorio)</td>
+<td style="text-align: right;">3591</td>
+<td style="text-align: right;">11.606</td>
+<td style="text-align: right;">3.279</td>
+<td style="text-align: right;">0.488</td>
+<td style="text-align: right;">0.914</td>
+<td style="text-align: right;">0.960</td>
+<td style="text-align: right;">0.678</td>
+<td style="text-align: right;">0.798</td>
+<td style="text-align: right;">0.527</td>
+<td style="text-align: right;">4.856</td>
+<td style="text-align: right;">2.649</td>
+<td style="text-align: right;">8959.325</td>
+<td style="text-align: right;">7525.478</td>
+<td style="text-align: right;">148.056</td>
+<td style="text-align: right;">16304.365</td>
+<td style="text-align: right;">86.733</td>
+<td style="text-align: right;">962.974</td>
+<td style="text-align: right;">910.564</td>
+<td style="text-align: right;">0.842</td>
+<td style="text-align: right;">-9.908</td>
+<td style="text-align: right;">-75.724</td>
+<td style="text-align: right;">14.290</td>
+<td style="text-align: right;">6459.769</td>
+<td style="text-align: right;">5193.592</td>
+<td style="text-align: right;">0.411</td>
+<td style="text-align: right;">4.754</td>
+<td style="text-align: right;">0.407</td>
+<td style="text-align: right;">0.917</td>
+<td style="text-align: right;">0.265</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Menor ruralidad y menor no uso reciente (exploratorio)</td>
+<td style="text-align: right;">409</td>
+<td style="text-align: right;">11.885</td>
+<td style="text-align: right;">3.372</td>
+<td style="text-align: right;">0.458</td>
+<td style="text-align: right;">0.998</td>
+<td style="text-align: right;">0.961</td>
+<td style="text-align: right;">0.979</td>
+<td style="text-align: right;">0.890</td>
+<td style="text-align: right;">0.883</td>
+<td style="text-align: right;">4.966</td>
+<td style="text-align: right;">2.667</td>
+<td style="text-align: right;">13699.922</td>
+<td style="text-align: right;">10957.145</td>
+<td style="text-align: right;">862.406</td>
+<td style="text-align: right;">129272.342</td>
+<td style="text-align: right;">430.714</td>
+<td style="text-align: right;">7148.125</td>
+<td style="text-align: right;">6214.570</td>
+<td style="text-align: right;">0.409</td>
+<td style="text-align: right;">-11.369</td>
+<td style="text-align: right;">-77.065</td>
+<td style="text-align: right;">17.715</td>
+<td style="text-align: right;">50895.100</td>
+<td style="text-align: right;">41539.267</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">5.310</td>
+<td style="text-align: right;">0.711</td>
+<td style="text-align: right;">0.905</td>
+<td style="text-align: right;">0.161</td>
+</tr>
+</tbody>
+</table>
+<p>La mayor prevalencia observada de no uso se registró en el perfil <strong>Mayor ruralidad y no uso cercano al promedio (exploratorio)</strong> (cluster 0: 26.5%), frente a 16.1% en el perfil de menor prevalencia. Estas diferencias son descriptivas.</p>
+<p><img alt="Proyección PCA de los perfiles" src="../figures/clusters_pca.png" /></p>
+<p><img alt="Gráfico de silueta de los perfiles" src="../figures/silhouette_clusters.png" /></p>
+<p>Para el modelo seleccionado se generan SHAP beeswarm, dependencia P1144 con la categoría de lengua materna y P1144 con ratio alumnos/docente distrital, además de dos waterfall de casos correctamente clasificados. SHAP explica contribuciones a la salida del modelo y no estima efectos causales.</p>
+<h2>3. Resultados</h2>
+<h3>3.1 Desempeño de los modelos</h3>
+<p>La prevalencia positiva fue 25.6%, que debe contrastarse con la distribución de clases antes de interpretar accuracy o una única métrica. La clasificación se evaluó con separación por conglomerado y ponderación disponible. La Tabla 2 contiene los resultados calculados en esta ejecución. El modelo con mayor ROC-AUC medio GroupKFold fue <strong>RandomForest</strong>. Sus métricas en prueba agrupada fueron ROC-AUC=0.828, PR-AUC=0.571 y F1 macro=0.712. La PR-AUC es especialmente informativa si hay desbalance y debe compararse con la prevalencia de la clase positiva.</p>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th style="text-align: right;">AUC CV media</th>
+<th style="text-align: right;">DE CV</th>
+<th style="text-align: right;">AUC prueba</th>
+<th style="text-align: right;">PR-AUC</th>
+<th style="text-align: right;">F1 macro</th>
+<th style="text-align: right;">Precisión</th>
+<th style="text-align: right;">Recall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>modelo</td>
+<td style="text-align: right;">cv_roc_auc_mean</td>
+<td style="text-align: right;">cv_roc_auc_sd</td>
+<td style="text-align: right;">cv_pr_auc_mean</td>
+<td style="text-align: right;">cv_pr_auc_sd</td>
+<td style="text-align: right;">cv_f1_macro_mean</td>
+<td style="text-align: right;">cv_f1_macro_sd</td>
+<td style="text-align: right;">test_roc_auc</td>
+</tr>
+<tr>
+<td>:----------------------------</td>
+<td style="text-align: right;">------------------:</td>
+<td style="text-align: right;">----------------:</td>
+<td style="text-align: right;">-----------------:</td>
+<td style="text-align: right;">---------------:</td>
+<td style="text-align: right;">-------------------:</td>
+<td style="text-align: right;">-----------------:</td>
+<td style="text-align: right;">---------------:</td>
+</tr>
+<tr>
+<td>RandomForest</td>
+<td style="text-align: right;">0.819</td>
+<td style="text-align: right;">0.011</td>
+<td style="text-align: right;">0.586</td>
+<td style="text-align: right;">0.007</td>
+<td style="text-align: right;">0.711</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: right;">0.828</td>
+</tr>
+<tr>
+<td>HistGradientBoosting</td>
+<td style="text-align: right;">0.818</td>
+<td style="text-align: right;">0.013</td>
+<td style="text-align: right;">0.589</td>
+<td style="text-align: right;">0.013</td>
+<td style="text-align: right;">0.712</td>
+<td style="text-align: right;">0.005</td>
+<td style="text-align: right;">0.835</td>
+</tr>
+<tr>
+<td>ExtraTrees</td>
+<td style="text-align: right;">0.817</td>
+<td style="text-align: right;">0.011</td>
+<td style="text-align: right;">0.584</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: right;">0.693</td>
+<td style="text-align: right;">0.006</td>
+<td style="text-align: right;">0.822</td>
+</tr>
+<tr>
+<td>LogisticRegression_baseline</td>
+<td style="text-align: right;">0.804</td>
+<td style="text-align: right;">0.009</td>
+<td style="text-align: right;">0.559</td>
+<td style="text-align: right;">0.020</td>
+<td style="text-align: right;">0.681</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: right;">0.812</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Evaluación agrupada del clasificador" src="../figures/evaluacion_modelos.png" /></p>
+<p>La matriz de confusión y las curvas del modelo ganador se guardan junto al informe. Los falsos negativos representan escolares sin uso reciente de Internet que el modelo no priorizaría; los falsos positivos implican priorizar personas cuyo uso observado sí ocurrió. En una política de focalización, ambos errores tienen costos distintos y el umbral 0.5 no debe considerarse óptimo sin definir esos costos.</p>
+<p>En el test agrupado, la matriz de conteos registra <strong>591 falsos positivos</strong> y <strong>206 falsos negativos</strong> (TN=2,110; TP=678). Con FACTOR07, los falsos positivos suman 185,488.8 y los falsos negativos 74,230.3 en escala ponderada.</p>
+<h3>3.2 Perfiles no supervisados</h3>
+<p>La Tabla 1 y los gráficos PCA y de silueta describen la solución seleccionada. Cada perfil recibe un nombre descriptivo derivado de su ruralidad y prevalencia relativa de no uso; la tabla permite contrastar también frecuencia TIC, ingreso/gasto, servicios básicos, rezago y contexto escolar. Son grupos exploratorios, no categorías oficiales ni segmentos de riesgo validados externamente.</p>
+<h3>3.3 Explicabilidad</h3>
+<p>Los artefactos SHAP muestran la contribución del modelo a su propia salida sobre los casos analizados. El beeswarm permite comparar importancia y dirección de asociación condicional; las dependencias ilustran relaciones aprendidas que pueden reflejar correlación entre atributos. Los waterfall son explicaciones locales para casos de la muestra de prueba y no deben generalizarse a todos los escolares. Si un artefacto SHAP no está disponible, el estado de generación se registra en <code>outputs/reports/shap_estado.txt</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Variable original (contribuciones transformadas sumadas)</th>
+<th style="text-align: right;">Media absoluta SHAP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>variable</td>
+<td style="text-align: right;">mean_abs_shap</td>
+</tr>
+<tr>
+<td>:----------------------------</td>
+<td style="text-align: right;">----------------:</td>
+</tr>
+<tr>
+<td>P308A</td>
+<td style="text-align: right;">0.0824</td>
+</tr>
+<tr>
+<td>edad</td>
+<td style="text-align: right;">0.0498</td>
+</tr>
+<tr>
+<td>tic_uso_computadora_ult3m</td>
+<td style="text-align: right;">0.0409</td>
+</tr>
+<tr>
+<td>gasto_hogar_percapita</td>
+<td style="text-align: right;">0.0360</td>
+</tr>
+<tr>
+<td>tic_habilidades_digitales_n</td>
+<td style="text-align: right;">0.0200</td>
+</tr>
+<tr>
+<td>ingreso_hogar_percapita</td>
+<td style="text-align: right;">0.0199</td>
+</tr>
+<tr>
+<td>POBREZA</td>
+<td style="text-align: right;">0.0166</td>
+</tr>
+<tr>
+<td>rural</td>
+<td style="text-align: right;">0.0156</td>
+</tr>
+<tr>
+<td>grado_ebr</td>
+<td style="text-align: right;">0.0146</td>
+</tr>
+<tr>
+<td>esc_prop_gestion_publica</td>
+<td style="text-align: right;">0.0131</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="SHAP global beeswarm" src="../figures/shap_beeswarm.png" /></p>
+<p><img alt="Dependencia SHAP 1" src="../figures/shap_dependence_1.png" /></p>
+<p><img alt="Dependencia SHAP 2" src="../figures/shap_dependence_2.png" /></p>
+<p><img alt="Explicación local de alto riesgo" src="../figures/shap_waterfall_alto.png" /></p>
+<p><img alt="Explicación local de bajo riesgo" src="../figures/shap_waterfall_bajo.png" /></p>
+<p>En la muestra analítica, las preguntas P316C1–P316C10 suman 2,596 respuestas válidas por ítem como máximo; el porcentaje de sí por tarea se informa en <code>resumen_variables_tic_enaho.csv</code>. La suma individual de tareas se utiliza como predictor exploratorio; las no respuestas se conservan como faltantes e imputan dentro de cada fold con indicador de faltante.</p>
+<p>Caso alto correctamente clasificado entre los extremos de todo el test (real=1, predicho=1, probabilidad=0.955): las mayores contribuciones positivas que elevaron la salida fueron num__gasto_hogar_percapita (+0.042), num__edad (+0.037), num__ingreso_hogar_percapita (+0.028); las negativas que la redujeron fueron ninguna de las seis mayores. Caso bajo correctamente clasificado entre los extremos de todo el test (real=0, predicho=0, probabilidad=0.005): las mayores contribuciones positivas que elevaron la salida fueron ninguna de las seis mayores; las negativas que la redujeron fueron num__tic_uso_computadora_ult3m (-0.056), num__edad (-0.056), num__missingindicator_tic_habilidades_digitales_n (-0.052).</p>
+<h2>4. Discusión</h2>
+<p>El flujo combina atributos individuales y domésticos con indicadores contextuales del padrón escolar, y aplica separación geográfica por conglomerado que reduce la posibilidad de que hogares cercanos o del mismo segmento muestral aparezcan a ambos lados de la evaluación. El pipeline de transformaciones evita que estadísticas de imputación, escalado o categorías del test se filtren al entrenamiento. Estas decisiones fortalecen la validez interna de la comparación predictiva.</p>
+<p>Los resultados deben leerse con cautela por cuatro razones. Primero, el no uso de Internet en el mes previo no equivale a ausencia de conectividad, habilidades, calidad de conexión o aprendizaje. Segundo, el enlace ESCALE final es distrital; no prueba que el estudiante esté matriculado en una escuela con los valores promedio del distrito. Se incorporó la matrícula oficial Censo Educativo 2025: el cruce interno con el padrón por <code>COD_MOD + ANEXO</code> encontró 54 038 de 54 038 servicios. Los módulos ENAHO 2025 disponibles no tienen <code>COD_MOD</code> ni <code>CODLOCAL</code>, por lo que las variables nuevas describen el contexto distrital, no la escuela del escolar. Tercero, ENAHO es una encuesta con diseño complejo; los pesos se usan cuando el estimador lo admite, pero las métricas reportadas no constituyen necesariamente estimadores oficiales de prevalencia ni incorporan todas las etapas del diseño muestral. Cuarto, una asociación predictiva no identifica el efecto de ampliar infraestructura o entregar dispositivos.</p>
+<p>La validez externa requiere repetir el análisis en otra muestra o edición. P316C permite describir tareas informáticas declaradas, pero no sustituye una evaluación de competencia digital ni de aprendizaje. Los archivos ESCALE existentes no contienen datos utilizables de altitud, equipos y conectividad escolar para este análisis; esos factores quedan como limitación explícita.</p>
+<h2>5. Conclusiones y recomendaciones</h2>
+<ol>
+<li>El proyecto deja una integración reproducible de los módulos ENAHO y el padrón ESCALE 2025 disponible, con llaves de texto y validación de cardinalidad; ESCALE se interpreta como contexto distrital porque ENAHO no proporciona la llave institucional requerida para el enlace individual.</li>
+<li>La predicción del no uso de Internet se evalúa con separación y validación cruzada por CONGLOME; las transformaciones se ajustan dentro de cada fold.</li>
+<li>El clustering aporta perfiles exploratorios y SHAP describe el comportamiento del clasificador seleccionado, sin convertir estos resultados en efectos causales.</li>
+<li>La política educativa debería usar estos hallazgos como señal para diagnóstico territorial y validar la necesidad directamente con escuelas y hogares. No conviene asignar recursos individuales con una etiqueta predictiva sin evaluar errores, equidad y desempeño fuera de muestra.</li>
+<li>Los archivos existentes no permiten atribuir escuela, altitud, equipamiento o conectividad escolar al estudiante; la vinculación institucional requiere una llave compatible en ENAHO y datos escolares pertinentes. P316C ofrece una aproximación de tareas digitales declaradas, no una evaluación directa de destreza.</li>
+</ol>
+<h2>Referencias y reproducibilidad</h2>
+<ul>
+<li>Instituto Nacional de Estadística e Informática (INEI). ENAHO 2025, módulos de microdatos y documentación metodológica. Portal oficial: https://www.inei.gob.pe/bases-de-datos/.</li>
+<li>Instituto Nacional de Estadística e Informática (INEI). <em>Diccionario de Datos ENAHO 2025</em> (archivo oficial descargado en <code>data/raw/Diccionario_ENAHO_2025.pdf</code>, edición mayo 2026): https://proyectos.inei.gob.pe/iinei/srienaho/Descarga/DocumentosMetodologicos/2025-55/20_Diccionario_2025.pdf.</li>
+<li>Ministerio de Educación del Perú. ESCALE, padrón de instituciones educativas y Censo Educativo. Portal oficial: https://escale.minedu.gob.pe/.</li>
+<li>Ministerio de Educación del Perú. Catálogo oficial de bases del Censo Educativo 2025 (incluye <code>00_Padron.zip</code> y <code>01_Matricula_01.zip</code>, actualizado en el catálogo el 23/01/2026): https://escale.minedu.gob.pe/uee/-/document_library_display/GMv7/view/10632985.</li>
+<li>Ministerio de Educación del Perú. <em>Diccionario de datos del Censo Educativo 2025</em> (<code>COD_MOD</code>: identificador del servicio educativo): https://escale.minedu.gob.pe/documents/10156/10632985/00_Diccionario%2Bde%2Bdatos_CE_2025.pdf.</li>
+<li>Lundberg, S. M., &amp; Lee, S.-I. (2017). A Unified Approach to Interpreting Model Predictions. <em>Advances in Neural Information Processing Systems</em>.</li>
+<li>Pedregosa, F. et al. (2011). Scikit-learn: Machine Learning in Python. <em>Journal of Machine Learning Research</em>, 12, 2825–2830.</li>
+</ul>
+<p><strong>Reproducibilidad:</strong> código en <code>src/pipeline.py</code>; notebook en <code>notebooks/01_evaluacion_brecha_digital.ipynb</code>; dependencias en <code>requirements.txt</code>; semilla 42. El resumen de datos y la huella de evaluación están en <code>outputs/tables/resumen_ejecucion.json</code> y <code>outputs/models/metadatos_modelo.json</code>.</p></body></html>

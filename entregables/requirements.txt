@@ -1,0 +1,16 @@
+# Entorno reproducible del proyecto ENAHO-ESCALE 2025
+pandas>=2.2,<3.0
+numpy>=1.26,<3.0
+scipy>=1.12
+scikit-learn>=1.5,<2.0
+matplotlib>=3.8
+seaborn>=0.13
+shap>=0.46
+dbfread>=2.0
+pyarrow>=17
+jupyterlab>=4.2
+ipykernel>=6.29
+nbformat>=5.10
+markdown>=3.6
+tabulate>=0.9
+reportlab>=4.2,<5.0

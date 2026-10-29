@@ -1,0 +1,27 @@
+{
+  "fecha_utc": "2026-10-29T02:02:22.236694+00:00",
+  "python": "3.12.14",
+  "plataforma": "Windows-10-10.0.19045-SP0",
+  "semilla_documentada": 42,
+  "fuente_canonica": "../entregables/",
+  "pipeline": "../entregables/src/pipeline.py",
+  "notebook": "../entregables/notebooks/01_evaluacion_brecha_digital.ipynb",
+  "modelo_guardado": "../entregables/outputs/models/modelo_ganador.joblib",
+  "dataset_procesado": "../entregables/data/processed/dataset_enaho_escale_2025.parquet",
+  "dependencias": {
+    "pandas": "2.3.3",
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "pyarrow": "26.0.0",
+    "joblib": "1.6.0",
+    "shap": "0.54.1",
+    "dbfread": "2.0.7",
+    "jupyterlab": "4.6.4",
+    "ipykernel": "7.4.0",
+    "openpyxl": "no instalado en .venv"
+  },
+  "procedimiento_auditoria": "Solo lectura sobre artefactos fuente. Curvas de prueba se calcularon con modelo guardado y el GroupShuffleSplit de semilla 42; no hubo entrenamiento. Datos de curva guardados son agregados, no predicciones individuales.",
+  "resolucion_graficas": "Figuras derivadas aquí guardadas a 300 DPI más SVG; figuras existentes se copiaron sin alterar, su resolución fuente se conserva."
+}

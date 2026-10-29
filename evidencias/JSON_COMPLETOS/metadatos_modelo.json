@@ -1,0 +1,53 @@
+{
+  "modelo": "RandomForest",
+  "hiperparametros": {
+    "n_estimators": 250,
+    "min_samples_leaf": 6
+  },
+  "busqueda": "candidatos predefinidos evaluados con GroupKFold ponderado; el test por CONGLOME permanece separado",
+  "semilla": 42,
+  "features_numericas": [
+    "edad",
+    "grado_ebr",
+    "rezago_escolar_anios",
+    "P1121",
+    "P1144",
+    "agua_potable",
+    "agua_red_publica",
+    "saneamiento_red_publica",
+    "MIEPERHO",
+    "POBREZA",
+    "ingreso_hogar_percapita",
+    "gasto_hogar_percapita",
+    "esc_n_escuelas",
+    "esc_alumnos",
+    "esc_n_locales_padlocal",
+    "esc_docentes",
+    "esc_secciones",
+    "esc_prop_gestion_publica",
+    "esc_lat_media",
+    "esc_lon_media",
+    "esc_ratio_alumno_docente",
+    "esc_matricula_primaria_2025",
+    "esc_matricula_secundaria_2025",
+    "rural",
+    "tic_habilidades_digitales_n",
+    "tic_uso_computadora_ult3m"
+  ],
+  "features_categoricas": [
+    "P203",
+    "P207",
+    "P300A",
+    "P308A",
+    "P110",
+    "P110A1",
+    "P111A",
+    "DOMINIO",
+    "ESTRATO",
+    "UBIGEO"
+  ],
+  "n_train": 14407,
+  "n_test": 3585,
+  "n_grupos_train": 3292,
+  "target": "exclusion_digital"
+}

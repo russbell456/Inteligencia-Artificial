@@ -1,0 +1,155 @@
+{
+  "modelo": "RandomForest ganador guardado",
+  "explainer": "TreeExplainer por código del pipeline; valores de clase positiva vals[...,1]. model_output no se fija explícitamente.",
+  "fondo": "El código construye muestra bg de 100 filas; TreeExplainer se inicializa solo con estimador, por lo que esa muestra no se pasa como background al explainer.",
+  "muestra_explicada": "hasta 250 filas aleatorias del test más extremos correctos alto/bajo; casos almacenados son anonimizados.",
+  "importancia_global": [
+    {
+      "variable": "P308A",
+      "mean_abs_shap": 0.0824187341794441,
+      "metodo": "contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+    },
+    {
+      "variable": "edad",
+      "mean_abs_shap": 0.0497638768916162,
+      "metodo": "contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+    },
+    {
+      "variable": "tic_uso_computadora_ult3m",
+      "mean_abs_shap": 0.0409034710818127,
+      "metodo": "contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+    },
+    {
+      "variable": "gasto_hogar_percapita",
+      "mean_abs_shap": 0.0359945347763487,
+      "metodo": "contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+    },
+    {
+      "variable": "tic_habilidades_digitales_n",
+      "mean_abs_shap": 0.0200114877346744,
+      "metodo": "contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+    },
+    {
+      "variable": "ingreso_hogar_percapita",
+      "mean_abs_shap": 0.0199279149827168,
+      "metodo": "contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+    },
+    {
+      "variable": "POBREZA",
+      "mean_abs_shap": 0.0166493024371758,
+      "metodo": "contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+    },
+    {
+      "variable": "rural",
+      "mean_abs_shap": 0.0155890413940568,
+      "metodo": "contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+    },
+    {
+      "variable": "grado_ebr",
+      "mean_abs_shap": 0.0146153198246195,
+      "metodo": "contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+    },
+    {
+      "variable": "esc_prop_gestion_publica",
+      "mean_abs_shap": 0.0130941422489725,
+      "metodo": "contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+    }
+  ],
+  "casos_locales": [
+    {
+      "caso": "caso_alto_01",
+      "seleccion": "extremo correcto entre todos los casos del test agrupado",
+      "real": 1,
+      "predicho": 1,
+      "probabilidad": 0.9552800020579815,
+      "contribuciones_top": [
+        {
+          "variable": "num__gasto_hogar_percapita",
+          "shap": 0.04175862346981579,
+          "valor_transformado": -1.00812623250665
+        },
+        {
+          "variable": "num__edad",
+          "shap": 0.036555283305048966,
+          "valor_transformado": -1.0917565795227757
+        },
+        {
+          "variable": "num__ingreso_hogar_percapita",
+          "shap": 0.0280912903240567,
+          "valor_transformado": -0.9594055130602869
+        },
+        {
+          "variable": "num__P1121",
+          "shap": 0.02713830740696177,
+          "valor_transformado": -3.5556985845600613
+        },
+        {
+          "variable": "cat__P308A_3.0",
+          "shap": 0.02574887051794168,
+          "valor_transformado": 0.0
+        },
+        {
+          "variable": "cat__P308A_2.0",
+          "shap": 0.025454367243471734,
+          "valor_transformado": 1.0
+        }
+      ]
+    },
+    {
+      "caso": "caso_bajo_01",
+      "seleccion": "extremo correcto entre todos los casos del test agrupado",
+      "real": 0,
+      "predicho": 0,
+      "probabilidad": 0.005384425463158924,
+      "contribuciones_top": [
+        {
+          "variable": "num__tic_uso_computadora_ult3m",
+          "shap": -0.05636061335455735,
+          "valor_transformado": 2.417473996254214
+        },
+        {
+          "variable": "num__edad",
+          "shap": -0.0561034811937639,
+          "valor_transformado": 1.0373925403776807
+        },
+        {
+          "variable": "num__missingindicator_tic_habilidades_digitales_n",
+          "shap": -0.051546151314002905,
+          "valor_transformado": -2.4174739962542144
+        },
+        {
+          "variable": "cat__P308A_2.0",
+          "shap": -0.03990440525067168,
+          "valor_transformado": 0.0
+        },
+        {
+          "variable": "num__missingindicator_tic_uso_computadora_ult3m",
+          "shap": -0.03658424749039314,
+          "valor_transformado": -1.4136247973341005
+        },
+        {
+          "variable": "cat__P308A_3.0",
+          "shap": -0.03652301777065552,
+          "valor_transformado": 1.0
+        }
+      ]
+    }
+  ],
+  "dependencias": [
+    {
+      "grafico": 1,
+      "eje_x": "P1144 original (0=no Internet en hogar; 1=sí)",
+      "color": "P300A original: Quechua, Aimara, otras lenguas/faltante",
+      "n": 252,
+      "unidad_y": "valor SHAP del predictor P1144"
+    },
+    {
+      "grafico": 2,
+      "eje_x": "ratio distrital alumnos/docente en unidades originales",
+      "color": "P1144 original: internet en hogar",
+      "n": 252,
+      "unidad_y": "valor SHAP del predictor P1144"
+    }
+  ],
+  "interpretacion": "SHAP describe atribuciones del modelo. El signo indica aumento/disminución de la salida explicada del TreeExplainer; no se interpreta como causalidad. Globalmente solo es verificable el orden por magnitud absoluta, no el sentido por valores de atributo."
+}

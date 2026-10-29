@@ -1,0 +1,82 @@
+[
+  {
+    "caso": "alto",
+    "seleccion": "extremo correcto entre todos los casos del test agrupado",
+    "real": 1,
+    "predicho": 1,
+    "probabilidad": 0.9552800020579815,
+    "indice_fila": "9755",
+    "contribuciones_top": [
+      {
+        "variable": "num__gasto_hogar_percapita",
+        "shap": 0.04175862346981579,
+        "valor_transformado": -1.00812623250665
+      },
+      {
+        "variable": "num__edad",
+        "shap": 0.036555283305048966,
+        "valor_transformado": -1.0917565795227757
+      },
+      {
+        "variable": "num__ingreso_hogar_percapita",
+        "shap": 0.0280912903240567,
+        "valor_transformado": -0.9594055130602869
+      },
+      {
+        "variable": "num__P1121",
+        "shap": 0.02713830740696177,
+        "valor_transformado": -3.5556985845600613
+      },
+      {
+        "variable": "cat__P308A_3.0",
+        "shap": 0.02574887051794168,
+        "valor_transformado": 0.0
+      },
+      {
+        "variable": "cat__P308A_2.0",
+        "shap": 0.025454367243471734,
+        "valor_transformado": 1.0
+      }
+    ]
+  },
+  {
+    "caso": "bajo",
+    "seleccion": "extremo correcto entre todos los casos del test agrupado",
+    "real": 0,
+    "predicho": 0,
+    "probabilidad": 0.005384425463158924,
+    "indice_fila": "18670",
+    "contribuciones_top": [
+      {
+        "variable": "num__tic_uso_computadora_ult3m",
+        "shap": -0.05636061335455735,
+        "valor_transformado": 2.417473996254214
+      },
+      {
+        "variable": "num__edad",
+        "shap": -0.0561034811937639,
+        "valor_transformado": 1.0373925403776807
+      },
+      {
+        "variable": "num__missingindicator_tic_habilidades_digitales_n",
+        "shap": -0.051546151314002905,
+        "valor_transformado": -2.4174739962542144
+      },
+      {
+        "variable": "cat__P308A_2.0",
+        "shap": -0.03990440525067168,
+        "valor_transformado": 0.0
+      },
+      {
+        "variable": "num__missingindicator_tic_uso_computadora_ult3m",
+        "shap": -0.03658424749039314,
+        "valor_transformado": -1.4136247973341005
+      },
+      {
+        "variable": "cat__P308A_3.0",
+        "shap": -0.03652301777065552,
+        "valor_transformado": 1.0
+      }
+    ]
+  }
+]

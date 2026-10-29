@@ -1,0 +1,11 @@
+﻿variable,mean_abs_shap,metodo
+P308A,0.0824187341794441,"contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+edad,0.0497638768916162,"contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+tic_uso_computadora_ult3m,0.0409034710818127,"contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+gasto_hogar_percapita,0.0359945347763487,"contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+tic_habilidades_digitales_n,0.0200114877346744,"contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+ingreso_hogar_percapita,0.0199279149827168,"contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+POBREZA,0.0166493024371758,"contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+rural,0.0155890413940568,"contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+grado_ebr,0.0146153198246195,"contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"
+esc_prop_gestion_publica,0.0130941422489725,"contribuciones SHAP sumadas por variable fuente, luego valor absoluto y promedio"

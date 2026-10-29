@@ -1,0 +1,493 @@
+{
+  "fecha_utc": "2026-10-29T02:00:13.848825+00:00",
+  "proyecto_canonico": "entregables/",
+  "inventario_fuente": [
+    {
+      "ruta": "entregables/README.md",
+      "bytes": 3142,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/requirements-lock.txt",
+      "bytes": 2201,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/requirements.txt",
+      "bytes": 284,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/notebooks/01_evaluacion_brecha_digital.ipynb",
+      "bytes": 6682,
+      "categoria": "notebook",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/src/create_article_pdf.py",
+      "bytes": 19562,
+      "categoria": "script",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/src/pipeline.py",
+      "bytes": 58715,
+      "categoria": "script",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/src/report.py",
+      "bytes": 24841,
+      "categoria": "script",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/src/__init__.py",
+      "bytes": 64,
+      "categoria": "script",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/data/processed/.gitkeep",
+      "bytes": 1,
+      "categoria": "processed",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/data/processed/dataset_enaho_escale_2025.csv",
+      "bytes": 8249303,
+      "categoria": "processed",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/data/processed/dataset_enaho_escale_2025.parquet",
+      "bytes": 1129255,
+      "categoria": "processed",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/data/processed/diccionario_variables.csv",
+      "bytes": 13508,
+      "categoria": "processed",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/data/raw/Diccionario_ENAHO_2025.pdf",
+      "bytes": 3083464,
+      "categoria": "raw",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/data/raw/Enaho01-2025-100.csv",
+      "bytes": 35773301,
+      "categoria": "raw",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/data/raw/Enaho01-2025-200.csv",
+      "bytes": 15681641,
+      "categoria": "raw",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/data/raw/Enaho01A-2025-300.csv",
+      "bytes": 110868117,
+      "categoria": "raw",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/data/raw/Matricula_01_2025.dbf",
+      "bytes": 49068445,
+      "categoria": "raw",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/data/raw/Padlocal.dbf",
+      "bytes": 47426844,
+      "categoria": "raw",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/data/raw/Padron.dbf",
+      "bytes": 143837746,
+      "categoria": "raw",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/data/raw/README_fuentes.md",
+      "bytes": 2966,
+      "categoria": "raw",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/data/raw/Sumaria-2025.csv",
+      "bytes": 23365448,
+      "categoria": "raw",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/outputs/figures/.gitkeep",
+      "bytes": 1,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/figures/clusters_pca.png",
+      "bytes": 443281,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/figures/diagrama_cruce_tablas.png",
+      "bytes": 51992,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/figures/evaluacion_modelos.png",
+      "bytes": 144474,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/figures/shap_beeswarm.png",
+      "bytes": 97974,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/figures/shap_dependence_1.png",
+      "bytes": 50964,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/figures/shap_dependence_2.png",
+      "bytes": 96112,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/figures/shap_waterfall_alto.png",
+      "bytes": 111345,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/figures/shap_waterfall_bajo.png",
+      "bytes": 108113,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/figures/silhouette_clusters.png",
+      "bytes": 66643,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/models/.gitkeep",
+      "bytes": 1,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/models/metadatos_modelo.json",
+      "bytes": 1207,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/models/modelo_ganador.joblib",
+      "bytes": 20358715,
+      "categoria": "output",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/outputs/reports/articulo_brecha_digital_enaho_escale_2025.pdf",
+      "bytes": 1277736,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/reports/auditoria_variables_enaho_2025.md",
+      "bytes": 3312,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/reports/defensa_escal_llave_matricula.md",
+      "bytes": 3533,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/reports/informe_tecnico_brecha_digital_2025.html",
+      "bytes": 32791,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/reports/informe_tecnico_brecha_digital_2025.md",
+      "bytes": 25931,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/.gitkeep",
+      "bytes": 1,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/auditoria_cruce_matricula_2025.json",
+      "bytes": 449,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/auditoria_cruce_padlocal.json",
+      "bytes": 779,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/auditoria_split_conglomerado.json",
+      "bytes": 346,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/comparacion_modelos.csv",
+      "bytes": 1369,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/configuracion_clustering.json",
+      "bytes": 1208,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/cv_groupkfold_modelos.csv",
+      "bytes": 1513,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/diccionario_variables.csv",
+      "bytes": 13442,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/distribucion_clases.csv",
+      "bytes": 252,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/matricula_escale_distrito_2025.csv",
+      "bytes": 30688,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/matriz_confusion.csv",
+      "bytes": 49,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/matriz_confusion_ponderada.csv",
+      "bytes": 143,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/matriz_cumplimiento_guia.csv",
+      "bytes": 3399,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/metadata_enaho2025_datosabiertos.json",
+      "bytes": 157,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/metricas_clustering.csv",
+      "bytes": 757,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/muestra_auditoria.csv",
+      "bytes": 8249303,
+      "categoria": "output",
+      "incluido_en_evidencias": false
+    },
+    {
+      "ruta": "entregables/outputs/tables/pca_varianza.csv",
+      "bytes": 907,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/perfiles_clusters.csv",
+      "bytes": 1669,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/reporte_clasificacion.txt",
+      "bytes": 334,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/resumen_ejecucion.json",
+      "bytes": 1313,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/resumen_variables_tic_enaho.csv",
+      "bytes": 4013,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/schema_dataset.csv",
+      "bytes": 1245,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/shap_casos_locales.json",
+      "bytes": 2304,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/shap_dependencias.json",
+      "bytes": 453,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/outputs/tables/shap_importancia_top10.csv",
+      "bytes": 1237,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/src/__pycache__/create_article_pdf.cpython-312.pyc",
+      "bytes": 32289,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/src/__pycache__/pipeline.cpython-312.pyc",
+      "bytes": 84135,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/src/__pycache__/report.cpython-312.pyc",
+      "bytes": 29031,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    },
+    {
+      "ruta": "entregables/src/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 271,
+      "categoria": "output",
+      "incluido_en_evidencias": true
+    }
+  ],
+  "conteos": {
+    "archivos": 68,
+    "scripts": 4,
+    "notebooks": 1,
+    "raw": 9,
+    "processed": 4
+  },
+  "notebook_execution_counts": "Inspeccionar notebook: el archivo existe; las celdas sin salida no prueban ejecución independiente. Los resultados CSV/JSON son evidencia material separada.",
+  "modelo": "outputs/models/modelo_ganador.joblib presente; utilizado solo para derivar curvas agregadas, sin volver a entrenar.",
+  "guide_pdf": {
+    "estado": "archivo localizado en ruta Downloads suministrada por el usuario",
+    "ruta": "C:\\Users\\Russbell\\Downloads\\guía de evaluación - proyecto ia_ brecha digital y educación 2025 (enaho - escale)_r82irt6hai.pdf",
+    "incluido_en_paquete": false,
+    "nota": "No se copia el PDF original para evitar duplicación; usarlo como rector al redactar."
+  },
+  "privacidad": "No se exportaron microdatos procesados, filas de muestra de auditoría, IDs personales ni probabilidades individuales.",
+  "diferencias": "Solo se consideró entregables/ como paquete fuente más reciente. Otros outputs de raíz, si existen, pueden ser copias antiguas; cotejo diferencial exhaustivo pendiente.",
+  "rubrica": [
+    {
+      "criterio": "Integración ENAHO 100/200/300/Sumaria",
+      "estado": "Parcial/verificado",
+      "evidencia": "Dataset, código y resumen; llaves documentadas",
+      "limitacion": "No se recontaron etapas originales en esta exportación"
+    },
+    {
+      "criterio": "ESCALE matrícula 2025 enlazada con padrón",
+      "estado": "Verificado parcial",
+      "evidencia": "54,038/54,038 servicios enlazados por COD_MOD+ANEXO",
+      "limitacion": "No permite identificar escuela ENAHO individual"
+    },
+    {
+      "criterio": "Clustering, dos algoritmos y k 2–6",
+      "estado": "Verificado",
+      "evidencia": "CSV métricas con Silhouette, DB, CH; PCA y silueta existentes",
+      "limitacion": "Perfiles exploratorios; faltan variables escolares ausentes"
+    },
+    {
+      "criterio": "PCA 2D",
+      "estado": "Verificado",
+      "evidencia": "Figura clusters_pca existente",
+      "limitacion": "Figura de origen conservada, dpi de fuente no elevado"
+    },
+    {
+      "criterio": "Clasificación baseline + tres modelos",
+      "estado": "Verificado",
+      "evidencia": "Comparación y GroupKFold guardados",
+      "limitacion": "Falta validación estadística por diseño muestral"
+    },
+    {
+      "criterio": "Test aislado por CONGLOME",
+      "estado": "Verificado",
+      "evidencia": "auditoria_split_conglomerado.json, cero intersecciones",
+      "limitacion": "Registros son evidencia del pipeline guardado"
+    },
+    {
+      "criterio": "ROC/PR/matriz/calibración",
+      "estado": "Parcial",
+      "evidencia": "ROC/PR/calibración y matriz exportadas; curvas derivadas con modelo guardado",
+      "limitacion": "La recalibración es una derivación de auditoría; no reentrenamiento"
+    },
+    {
+      "criterio": "SHAP summary, 2 dependencias, 2 casos",
+      "estado": "Parcial",
+      "evidencia": "Figuras y JSON existentes",
+      "limitacion": "Salida SHAP no declara escala explícitamente; casos anonimizados"
+    },
+    {
+      "criterio": "Altitud, equipos, conectividad escolar",
+      "estado": "No verificable / ausente",
+      "evidencia": "Limitación explícita en auditoría y reportes",
+      "limitacion": "No inferir ni inventar"
+    },
+    {
+      "criterio": "Guía original PDF del docente",
+      "estado": "Pendiente de confirmación",
+      "evidencia": "No localizada dentro del workspace del proyecto",
+      "limitacion": "No se pudo comparar exhaustivamente el paquete con el PDF fuente en esta auditoría"
+    }
+  ]
+}

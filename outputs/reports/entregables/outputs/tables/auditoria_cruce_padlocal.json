@@ -1,0 +1,31 @@
+{
+  "archivo": "Padlocal.dbf",
+  "campos_disponibles": [
+    "CODLOCAL",
+    "DIR_CEN",
+    "LOCALIDAD",
+    "CODCP_INEI",
+    "CODCCPP",
+    "CEN_POB",
+    "CODGEO",
+    "D_DPTO",
+    "D_PROV",
+    "D_DIST",
+    "D_REGION",
+    "CODOOII",
+    "D_DREUGEL",
+    "ESTADO",
+    "D_ESTADO",
+    "CLOC_L1",
+    "AREA_LOC",
+    "GES_LOC",
+    "TIP_ENVIO",
+    "UBIGEO"
+  ],
+  "locales_unicos_padlocal": 69642,
+  "locales_unicos_padron": 69357,
+  "locales_comunes_por_codlocal": 69356,
+  "ubigeo_coincidente_entre_archivos": 69356,
+  "campos_de_coordenadas_o_altitud_en_padlocal": [],
+  "nota": "Padlocal aporta CODLOCAL y geografía administrativa, pero no columnas numéricas de coordenadas/altitud; Padron aporta coordenadas cuando están informadas."
+}

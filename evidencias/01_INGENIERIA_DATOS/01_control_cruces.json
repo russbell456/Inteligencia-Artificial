@@ -1,0 +1,74 @@
+{
+  "ENAHO": {
+    "llaves_persona": [
+      "AÑO",
+      "MES",
+      "CONGLOME",
+      "VIVIENDA",
+      "HOGAR",
+      "CODPERSO"
+    ],
+    "llave_hogar": [
+      "AÑO",
+      "MES",
+      "CONGLOME",
+      "VIVIENDA",
+      "HOGAR"
+    ],
+    "llave_sumaria": [
+      "AÑO",
+      "MES",
+      "CONGLOME",
+      "VIVIENDA",
+      "HOGAR"
+    ],
+    "preservacion_ids": "pipeline lee códigos como texto; CONGLOME se conserva como string"
+  },
+  "ESCALE": {
+    "archivo": "Matricula_01_2025.dbf",
+    "registros_filtrados_c201_3ap_3as": 56474,
+    "servicios_matricula_cod_mod_anexo": 54038,
+    "servicios_enlazados_al_padron": 54038,
+    "servicios_sin_coincidencia": 0,
+    "proporcion_servicios_enlazados": 1.0,
+    "llave_matricula_padron": [
+      "COD_MOD",
+      "ANEXO"
+    ],
+    "llave_para_enaho": "No existe COD_MOD/CODLOCAL en los módulos ENAHO 2025 disponibles; agregación posterior por UBIGEO."
+  },
+  "Padlocal": {
+    "archivo": "Padlocal.dbf",
+    "campos_disponibles": [
+      "CODLOCAL",
+      "DIR_CEN",
+      "LOCALIDAD",
+      "CODCP_INEI",
+      "CODCCPP",
+      "CEN_POB",
+      "CODGEO",
+      "D_DPTO",
+      "D_PROV",
+      "D_DIST",
+      "D_REGION",
+      "CODOOII",
+      "D_DREUGEL",
+      "ESTADO",
+      "D_ESTADO",
+      "CLOC_L1",
+      "AREA_LOC",
+      "GES_LOC",
+      "TIP_ENVIO",
+      "UBIGEO"
+    ],
+    "locales_unicos_padlocal": 69642,
+    "locales_unicos_padron": 69357,
+    "locales_comunes_por_codlocal": 69356,
+    "ubigeo_coincidente_entre_archivos": 69356,
+    "campos_de_coordenadas_o_altitud_en_padlocal": [],
+    "nota": "Padlocal aporta CODLOCAL y geografía administrativa, pero no columnas numéricas de coordenadas/altitud; Padron aporta coordenadas cuando están informadas."
+  },
+  "vinculo_escolar_individual": false,
+  "justificacion": "No existe COD_MOD/CODLOCAL en ENAHO 2025 disponible; matrícula y contexto se agregan por UBIGEO.",
+  "n_registros_analiticos": 17992
+}

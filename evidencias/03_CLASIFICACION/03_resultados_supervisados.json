@@ -1,0 +1,99 @@
+{
+  "target": "exclusion_digital: población escolar 6–17 años asistente (P307=1) con respuesta válida P314A; 1=P314A 2 (sin uso reciente), 0=P314A 1",
+  "poblacion": {
+    "n_total_analitico": 17992,
+    "n_test": 3585,
+    "n_train": 14407,
+    "prevalencia_test_no_ponderada": 0.24658298465829848,
+    "prevalencia_test_ponderada": 0.20946050986843692
+  },
+  "modelos": [
+    {
+      "modelo": "RandomForest",
+      "cv_roc_auc_mean": 0.8190120420877932,
+      "cv_roc_auc_sd": 0.0113259540952293,
+      "cv_pr_auc_mean": 0.5861090144640486,
+      "cv_pr_auc_sd": 0.0073106623356473,
+      "cv_f1_macro_mean": 0.7113664227396711,
+      "cv_f1_macro_sd": 0.0020794718759962,
+      "test_roc_auc": 0.828201696812908,
+      "test_pr_auc": 0.5714919462306542,
+      "test_f1_macro": 0.7118113878275047,
+      "test_precision": 0.4828597018953314,
+      "test_recall": 0.6999865707912964,
+      "test_brier": 0.1540286672984336,
+      "hiperparametros_seleccionados": "{\"min_samples_leaf\": 6, \"n_estimators\": 250}"
+    },
+    {
+      "modelo": "HistGradientBoosting",
+      "cv_roc_auc_mean": 0.8175340260976812,
+      "cv_roc_auc_sd": 0.012586108186103,
+      "cv_pr_auc_mean": 0.5889895956444637,
+      "cv_pr_auc_sd": 0.0125995957840922,
+      "cv_f1_macro_mean": 0.7117887979672749,
+      "cv_f1_macro_sd": 0.0054018163938988,
+      "test_roc_auc": 0.8347696725653779,
+      "test_pr_auc": 0.5846486987761311,
+      "test_f1_macro": 0.7013635620933204,
+      "test_precision": 0.4742366576553862,
+      "test_recall": 0.6619728145681708,
+      "test_brier": 0.146929510764371,
+      "hiperparametros_seleccionados": "{\"learning_rate\": 0.05, \"max_iter\": 150}"
+    },
+    {
+      "modelo": "ExtraTrees",
+      "cv_roc_auc_mean": 0.8170538960626677,
+      "cv_roc_auc_sd": 0.0114409276419323,
+      "cv_pr_auc_mean": 0.5836670853039058,
+      "cv_pr_auc_sd": 0.0135852617710936,
+      "cv_f1_macro_mean": 0.6934191701457051,
+      "cv_f1_macro_sd": 0.0059382893156128,
+      "test_roc_auc": 0.8220976732946157,
+      "test_pr_auc": 0.568618472489989,
+      "test_f1_macro": 0.6896295532615828,
+      "test_precision": 0.440797011560219,
+      "test_recall": 0.7470732859277303,
+      "test_brier": 0.1666938764188872,
+      "hiperparametros_seleccionados": "{\"min_samples_leaf\": 6, \"n_estimators\": 250}"
+    },
+    {
+      "modelo": "LogisticRegression_baseline",
+      "cv_roc_auc_mean": 0.8043961271708269,
+      "cv_roc_auc_sd": 0.0088671144806551,
+      "cv_pr_auc_mean": 0.5586549743767858,
+      "cv_pr_auc_sd": 0.0197004058177706,
+      "cv_f1_macro_mean": 0.680732731107479,
+      "cv_f1_macro_sd": 0.0034052267811644,
+      "test_roc_auc": 0.8120552741915058,
+      "test_pr_auc": 0.5279188809933852,
+      "test_f1_macro": 0.6758555307594234,
+      "test_precision": 0.4238293318821481,
+      "test_recall": 0.7323452598286971,
+      "test_brier": 0.1739643995486646,
+      "hiperparametros_seleccionados": "{}"
+    }
+  ],
+  "criterio_seleccion": "RandomForest por mayor media ROC-AUC ponderada en GroupKFold (según tabla del proyecto); HistGradientBoosting presenta métricas test mayores en ROC-AUC/PR trapezoidal, por lo que la selección no maximiza todos los criterios de test.",
+  "test_curves_recalculadas_desde_modelo_y_split_guardados": {
+    "ROC_AUC_ponderada": 0.828201696812908,
+    "PR_AUC_trapezoidal_ponderada": 0.5714919462306542,
+    "average_precision_ponderada": 0.5720785952199613,
+    "Brier_ponderado": 0.15402866729843362
+  },
+  "definicion_PR": "PR-AUC informado por pipeline = integral trapezoidal auc(recall, precision); Average Precision se entrega aparte y no es intercambiable.",
+  "semilla": 42,
+  "split": {
+    "split": "GroupShuffleSplit",
+    "test_size": 0.2,
+    "semilla": 42,
+    "n_train": 14407,
+    "n_test": 3585,
+    "conglomerados_train": 3292,
+    "conglomerados_test": 824,
+    "conglomerados_compartidos_train_test": [],
+    "separacion_confirmada": true,
+    "prevalencia_train": 0.2589019226764767,
+    "prevalencia_test": 0.24658298465829848
+  },
+  "sin_reentrenamiento": true
+}

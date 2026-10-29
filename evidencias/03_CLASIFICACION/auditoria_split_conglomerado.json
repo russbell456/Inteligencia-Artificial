@@ -1,0 +1,13 @@
+{
+  "split": "GroupShuffleSplit",
+  "test_size": 0.2,
+  "semilla": 42,
+  "n_train": 14407,
+  "n_test": 3585,
+  "conglomerados_train": 3292,
+  "conglomerados_test": 824,
+  "conglomerados_compartidos_train_test": [],
+  "separacion_confirmada": true,
+  "prevalencia_train": 0.2589019226764767,
+  "prevalencia_test": 0.24658298465829848
+}

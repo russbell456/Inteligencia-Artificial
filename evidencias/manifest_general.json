@@ -1,0 +1,19 @@
+{
+  "proyecto": "Brecha Digital y Rendimiento Escolar en el Perú: ENAHO + ESCALE 2025",
+  "fecha_utc": "2026-10-29T02:02:22.236694+00:00",
+  "readme": "README_PARA_CHATGPT.md",
+  "carpetas": [
+    "00_AUDITORIA",
+    "01_INGENIERIA_DATOS",
+    "02_CLUSTERING",
+    "03_CLASIFICACION",
+    "04_SHAP",
+    "05_ARTICULO_CIENTIFICO",
+    "06_REPRODUCIBILIDAD",
+    "GRAFICAS_PNG",
+    "TABLAS_CSV",
+    "JSON_COMPLETOS"
+  ],
+  "archivos_manifestados": 120,
+  "privacidad": "Sin microdatos personales o predicciones fila a fila."
+}

@@ -1,0 +1,965 @@
+{
+  "fecha_utc": "2026-10-29T02:02:22.236694+00:00",
+  "archivos": [
+    {
+      "ruta": "00_AUDITORIA/00_auditoria_proyecto.json",
+      "bytes": 15612,
+      "sha256": "0387f0db36aeef5f1ea79dca2e8f7289a400301f8bb5c055c39af04579fafcad",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "00_AUDITORIA/00_estado_cumplimiento_rubrica.csv",
+      "bytes": 1633,
+      "sha256": "6163d348d8e1e359d35c096317679cbd20ade10a43bb075163e0730785496f68",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "00_AUDITORIA/00_resumen_ejecutivo.md",
+      "bytes": 1288,
+      "sha256": "a40ee53f29bff2cb87119e924fe8a60a60ce431bb2b7727449a8907332842685",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "00_AUDITORIA/matriz_cumplimiento_guia.csv",
+      "bytes": 3399,
+      "sha256": "4da0561b0c13c05757449a976b5f3cdee7e1dc9e83ebd3479ea019863fe0603f",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "01_INGENIERIA_DATOS/01_calidad_datos.csv",
+      "bytes": 3778,
+      "sha256": "30a5c6ee0150733ec945a7dd09eae580de5cf451160cd4781a884ca2c6367fb2",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "01_INGENIERIA_DATOS/01_control_cruces.json",
+      "bytes": 2018,
+      "sha256": "cd93146926c8c1aff76aa832cceeea74ca8c0b18fe500fabc844945d715b900a",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "01_INGENIERIA_DATOS/01_control_fuga_datos.json",
+      "bytes": 1045,
+      "sha256": "689c554132d6d20c9715163d4df923dc62f37c861b071e2010e843af595477da",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "01_INGENIERIA_DATOS/01_diagrama_integracion.png",
+      "bytes": 175503,
+      "sha256": "b735324ef412d5e0a3f091bce112bf84a8f49ca66df9fc660a5d69a778b7874b",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "01_INGENIERIA_DATOS/01_diccionario_variables.csv",
+      "bytes": 13508,
+      "sha256": "8f9979e03100d25abde479e7f2452fade9f08e4baec076f26c40f3c58f23c288",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "01_INGENIERIA_DATOS/01_resumen_dataset.json",
+      "bytes": 1532,
+      "sha256": "8f05789c9b15238d858cde6b6c59948ad2301d42ed0a753abec0c6b60ab4e837",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "01_INGENIERIA_DATOS/auditoria_cruce_matricula_2025.json",
+      "bytes": 449,
+      "sha256": "24325e265b7fd1f2e7a551ec009e05b793161d68cf44988160d3defae95496ae",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "01_INGENIERIA_DATOS/auditoria_cruce_padlocal.json",
+      "bytes": 779,
+      "sha256": "59b50bb197ca0f5b42e9c536bc2f33c3f9be2095244a6b57255e9bd6df67b20e",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "01_INGENIERIA_DATOS/diccionario_variables.csv",
+      "bytes": 13442,
+      "sha256": "a1247a1fbb4144b03fd1698dab02568c95d51784e5b030ac3c0bd562f4000e94",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "01_INGENIERIA_DATOS/resumen_ejecucion.json",
+      "bytes": 1313,
+      "sha256": "bcc906800aef17cbbdb420e91d663a693285a860b3daabec426286010d092327",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "01_INGENIERIA_DATOS/resumen_variables_tic_enaho.csv",
+      "bytes": 4013,
+      "sha256": "b169c9a1a70d0ca92c998a02fdb1d5737c4231560a40a2b0e4eef04149d58a9d",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "01_INGENIERIA_DATOS/schema_dataset.csv",
+      "bytes": 1245,
+      "sha256": "22664f2b0be6a544755a18ad4a23911cfda789c5b8ef7c0ee20a357e13973012",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "02_CLUSTERING/02_caracterizacion_clusters.csv",
+      "bytes": 1665,
+      "sha256": "a7f4f1d2ad6070dfc53df7a13b24d32cee4f3aab55ed15702a168572c4356f76",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "02_CLUSTERING/02_comparacion_algoritmos.csv",
+      "bytes": 757,
+      "sha256": "dd1afccf314a3d0a5eb0530e13b6cbf4e6f6feda54337515340ee2e6bbd353cd",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "02_CLUSTERING/02_comparacion_metricas.png",
+      "bytes": 306662,
+      "sha256": "4ad66d598401a559c89572fdaaaff38414e06787ca4556c78adfa7de1d38fce8",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "02_CLUSTERING/02_distribucion_clusters.png",
+      "bytes": 77992,
+      "sha256": "ac1e012f6ab0c2497fc335df9169437e502aabe23aed70ae60f6d83421b3a511",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "02_CLUSTERING/02_grafico_pca.png",
+      "bytes": 443281,
+      "sha256": "28a9f6fd1b966dc1df699cbc365f35aec54bf2cabc9e37bfd20d1850a35014d2",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "02_CLUSTERING/02_grafico_silueta.png",
+      "bytes": 66643,
+      "sha256": "1de078ad92706f29410a5390b42c46bbf8615408361928e2abaf7dd1131ebecc",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "02_CLUSTERING/02_resultados_clustering.json",
+      "bytes": 4312,
+      "sha256": "45c384ee46a067b1a9f19a9ca21b979b70a37a2249bc6bef6007df34f38375b5",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "02_CLUSTERING/configuracion_clustering.json",
+      "bytes": 1208,
+      "sha256": "a6c4a42a3c9abe68405d5f5074e4392ba79e27ab2fd4331ef3c6b9cfa7935d72",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "02_CLUSTERING/metricas_clustering.csv",
+      "bytes": 757,
+      "sha256": "dd1afccf314a3d0a5eb0530e13b6cbf4e6f6feda54337515340ee2e6bbd353cd",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "02_CLUSTERING/pca_varianza.csv",
+      "bytes": 907,
+      "sha256": "457466f2c68e9a0fa4aca45da5062bf0d1d3dffdd94e9cdcb4ceab80084df2a7",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "02_CLUSTERING/perfiles_clusters.csv",
+      "bytes": 1669,
+      "sha256": "61420200fc5d6faa3a95d0ed14d4cab8eed041590a8435a11da595455c4e862a",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/03_analisis_errores.json",
+      "bytes": 475,
+      "sha256": "71a1b5e8bf0e95ba1b8fc83c1879fb99f5456aba78b74bf0527c601397a5190a",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/03_comparacion_modelos.csv",
+      "bytes": 1369,
+      "sha256": "4f33d6ae403fe7602e24d153735a65cdd56d882cc1cb133f1b2b5b57e4c8cb17",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/03_curva_calibracion.png",
+      "bytes": 124107,
+      "sha256": "fa8838039f9d42230b09a8819bf49ea002c9d7d9a8e224b579968cf9c81d3dce",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/03_curva_pr_puntos.csv",
+      "bytes": 138208,
+      "sha256": "0c01dd5db9f99979439a7a2c67c1eae39f527480113a3b99d1aea4bfd0ba49a7",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/03_curva_roc_puntos.csv",
+      "bytes": 138156,
+      "sha256": "22779ea22ad227a45868c557822841df1899f75dba5df367e450662f6d2b9190",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/03_curvas_precision_recall.png",
+      "bytes": 106488,
+      "sha256": "19e1f349747ae12600cf9c0095ccfe9334bf265b44bff62a77cb0ed4a6080058",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/03_curvas_roc.png",
+      "bytes": 123028,
+      "sha256": "aee3df04b8911367642589a6844840dbb9af0d668e08897b164705a43afd5c88",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/03_hiperparametros.json",
+      "bytes": 2018,
+      "sha256": "ecb82460421ebfb1172e197cdc1b2e2edd0220278774172f2b6bea02946d8e5f",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/03_matriz_confusion.png",
+      "bytes": 77470,
+      "sha256": "d2053f4ef2a53b25ca9cf8b01b5183d82531bce79f917259906bf605c3478264",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/03_resultados_supervisados.json",
+      "bytes": 4153,
+      "sha256": "b972bbf3e61890ca49799a2ffbaf41dfab201b88e63584b54670b09a40031651",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/03_validacion_groupkfold.csv",
+      "bytes": 1513,
+      "sha256": "a6990a0ad38a1e62814982e2170e5b05b5b6e8654a58abdeb471d759a5e2b2cb",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/auditoria_split_conglomerado.json",
+      "bytes": 346,
+      "sha256": "a177cad5df6db419ed00077f3d6e8120925ed9e62fbb24dc9c2a6503ce738a58",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/comparacion_modelos.csv",
+      "bytes": 1369,
+      "sha256": "4f33d6ae403fe7602e24d153735a65cdd56d882cc1cb133f1b2b5b57e4c8cb17",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/cv_groupkfold_modelos.csv",
+      "bytes": 1513,
+      "sha256": "a6990a0ad38a1e62814982e2170e5b05b5b6e8654a58abdeb471d759a5e2b2cb",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/distribucion_clases.csv",
+      "bytes": 252,
+      "sha256": "95f5ec0443a648120023b25619754dc36e16e7fb7f842ac9d752107ad88ed0ff",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/matriz_confusion.csv",
+      "bytes": 49,
+      "sha256": "ec5740cdcadf07adedbb9823aed40c5ecccdc4d85d2e377a9df4891061d77cc2",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/matriz_confusion_ponderada.csv",
+      "bytes": 143,
+      "sha256": "fc22a13337d744e9be47e21304ca9b05d2a1dc70dfa28deedb99d05a151c6371",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/metadatos_modelo.json",
+      "bytes": 1207,
+      "sha256": "374ccf0d7fc211c22e81307f5b931449dd1a0e6dca8ddc8a950d041fc030b79b",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "03_CLASIFICACION/reporte_clasificacion.txt",
+      "bytes": 334,
+      "sha256": "8c474bfefc9dbdcac3b4bb9543e8f83f87e73feddf242284e50f68dd3c959d28",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "04_SHAP/04_importancia_variables.csv",
+      "bytes": 1224,
+      "sha256": "55650a83de2ed47b813797330bc780b5ea20b04e5305060a01a5c5a244474d76",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "04_SHAP/04_interpretaciones_shap.md",
+      "bytes": 1040,
+      "sha256": "4e5fce8215dd593d1e6e978abb7c37f9a2cb5af3b0ee065882810dbb2d429a6c",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "04_SHAP/04_resumen_shap.json",
+      "bytes": 5723,
+      "sha256": "55dfae88458461fe4caa28f54c5683a61a456f295e25edc7ec6da3a48ddf2515",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "04_SHAP/04_shap_beeswarm.png",
+      "bytes": 97974,
+      "sha256": "f06f452547390009ae7addaa559f78b54a02ae6e0802b534e2956084362d1b4e",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "04_SHAP/04_shap_dependence_1.png",
+      "bytes": 50964,
+      "sha256": "2237a245f697ba56c404e532d139b5283c59844724398ed02500a672edfe14ae",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "04_SHAP/04_shap_dependence_2.png",
+      "bytes": 96112,
+      "sha256": "b100794009ea92479a511fa089fa7b6fb3837d9182697d6bcd26ef5666253765",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "04_SHAP/04_shap_waterfall_alto_riesgo.png",
+      "bytes": 111345,
+      "sha256": "ace0c626655686a136f2687808ca5d02cd06b32c08e6a7ecc4f1818ac824380f",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "04_SHAP/04_shap_waterfall_bajo_riesgo.png",
+      "bytes": 108113,
+      "sha256": "7869d87fb89a73891a23634615761fb15bb771e077b13031579dafb698c733f6",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "04_SHAP/shap_casos_locales.json",
+      "bytes": 2304,
+      "sha256": "55b3747b9908c8665b404b49612cbb86ef1a81eeb6e38c862f171afe51c06647",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "04_SHAP/shap_dependencias.json",
+      "bytes": 453,
+      "sha256": "f7f69cec87665ef8ff0ec4707badbae715d8d82ae993c24e0b001473987eca08",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "04_SHAP/shap_importancia_top10.csv",
+      "bytes": 1237,
+      "sha256": "1209fb925eacce54a2c8f47ccf8921f0d7f0d39e1bc44fbd3cb40985b0532b2e",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "05_ARTICULO_CIENTIFICO/05_conclusiones_sustentadas.md",
+      "bytes": 871,
+      "sha256": "c752ed86dad670a55bee2c9d218128147a968e07005e86e288841754d623de6b",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "05_ARTICULO_CIENTIFICO/05_fuentes_y_referencias.md",
+      "bytes": 696,
+      "sha256": "b267431d7a008fc2822338ca6839be2f7955b7107597b47a3835656ebe95f3c7",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "05_ARTICULO_CIENTIFICO/05_leyendas_figuras.csv",
+      "bytes": 5082,
+      "sha256": "00e89f7c7197134f9df2242eb520c798def3fb5f3b8fd5d7807885e531cc1e36",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "05_ARTICULO_CIENTIFICO/05_limitaciones_estudio.md",
+      "bytes": 1394,
+      "sha256": "3db9d59d349b1acb29faf5bbaae2b4786b742567550487789c5c38fbb44a40a2",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "05_ARTICULO_CIENTIFICO/05_metodologia_verificada.md",
+      "bytes": 977,
+      "sha256": "1139b111d7f0e2561f5a96931e6a68ee5c0f930ccade33d3ff4953172c76309a",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "05_ARTICULO_CIENTIFICO/05_resultados_interpretados.md",
+      "bytes": 1767,
+      "sha256": "77641c41ed4400ed7d6b300136e4db89b5ea7d8e9dda834508c57d8566153183",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "05_ARTICULO_CIENTIFICO/articulo_existente_5_paginas.pdf",
+      "bytes": 1277736,
+      "sha256": "c52e59f1fbe84ec50225dbc6c380142efc2db9e630c9b0f43b32425d5dd8dc3b",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "05_ARTICULO_CIENTIFICO/tabla_comparacion_modelos.csv",
+      "bytes": 1369,
+      "sha256": "4f33d6ae403fe7602e24d153735a65cdd56d882cc1cb133f1b2b5b57e4c8cb17",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "05_ARTICULO_CIENTIFICO/tabla_cv_groupkfold_modelos.csv",
+      "bytes": 1513,
+      "sha256": "a6990a0ad38a1e62814982e2170e5b05b5b6e8654a58abdeb471d759a5e2b2cb",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "05_ARTICULO_CIENTIFICO/tabla_matriz_confusion.csv",
+      "bytes": 49,
+      "sha256": "ec5740cdcadf07adedbb9823aed40c5ecccdc4d85d2e377a9df4891061d77cc2",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "05_ARTICULO_CIENTIFICO/tabla_metricas_clustering.csv",
+      "bytes": 757,
+      "sha256": "dd1afccf314a3d0a5eb0530e13b6cbf4e6f6feda54337515340ee2e6bbd353cd",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "05_ARTICULO_CIENTIFICO/tabla_perfiles_clusters.csv",
+      "bytes": 1669,
+      "sha256": "61420200fc5d6faa3a95d0ed14d4cab8eed041590a8435a11da595455c4e862a",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "05_ARTICULO_CIENTIFICO/tabla_shap_importancia_top10.csv",
+      "bytes": 1237,
+      "sha256": "1209fb925eacce54a2c8f47ccf8921f0d7f0d39e1bc44fbd3cb40985b0532b2e",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "06_REPRODUCIBILIDAD/06_dependencias.txt",
+      "bytes": 316,
+      "sha256": "7a5008ee031462ca3fc1795c14ea38d127934eef4245fadb21a32d8fc07257f5",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "06_REPRODUCIBILIDAD/06_instrucciones_ejecucion.md",
+      "bytes": 799,
+      "sha256": "de38a0dba1641904d91399cbc6714ac39d3cbcb45854895e7d157ea4cf7a6872",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "06_REPRODUCIBILIDAD/06_reproducibilidad.json",
+      "bytes": 1259,
+      "sha256": "594fd5649434e56fa402cec3b05862dcedb853e81a35df2597e5099d9806bbfd",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "06_REPRODUCIBILIDAD/finalizar_paquete.py",
+      "bytes": 13627,
+      "sha256": "53e189cbd381bc4f1ce9a955cc3ab1b4308a37bad1117e1e41acc854cbe98c01",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "06_REPRODUCIBILIDAD/generar_evidencias.py",
+      "bytes": 30257,
+      "sha256": "427b444f7736cd13a26299e6532be610c30ae9b0335aa683bc39d4122666e5f1",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/01_diagrama_integracion.png",
+      "bytes": 175503,
+      "sha256": "b735324ef412d5e0a3f091bce112bf84a8f49ca66df9fc660a5d69a778b7874b",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/01_diagrama_integracion.svg",
+      "bytes": 53002,
+      "sha256": "7533123fcde3825393d5137b8754b0e9c64e8611df4bdecf9ded59058e6624bd",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/01_diagrama_integracion_origen.png",
+      "bytes": 51992,
+      "sha256": "b67e52699c7a662bd29865b625ca37be0eb0705613427b32ac6f7ad9052210b8",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/02_comparacion_metricas.png",
+      "bytes": 306662,
+      "sha256": "4ad66d598401a559c89572fdaaaff38414e06787ca4556c78adfa7de1d38fce8",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/02_comparacion_metricas.svg",
+      "bytes": 84173,
+      "sha256": "335a9e217a37941c782c0aa4ee49ff3f79b3e6facfa7bb70a7e3acd78bcabc57",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/02_distribucion_clusters.png",
+      "bytes": 77992,
+      "sha256": "ac1e012f6ab0c2497fc335df9169437e502aabe23aed70ae60f6d83421b3a511",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/02_distribucion_clusters.svg",
+      "bytes": 36300,
+      "sha256": "64d49b5e5df0407f86cbada7b6584bf3875c5758ee3c58900af8ab6db66dac65",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/02_grafico_pca.png",
+      "bytes": 443281,
+      "sha256": "28a9f6fd1b966dc1df699cbc365f35aec54bf2cabc9e37bfd20d1850a35014d2",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/02_grafico_silueta.png",
+      "bytes": 66643,
+      "sha256": "1de078ad92706f29410a5390b42c46bbf8615408361928e2abaf7dd1131ebecc",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/03_curva_calibracion.png",
+      "bytes": 124107,
+      "sha256": "fa8838039f9d42230b09a8819bf49ea002c9d7d9a8e224b579968cf9c81d3dce",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/03_curva_calibracion.svg",
+      "bytes": 38194,
+      "sha256": "a6b91ddb091c43584a7f96b253a229b63ab99e0ab2901eca694f31ece820cdf9",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/03_curvas_precision_recall.png",
+      "bytes": 106488,
+      "sha256": "19e1f349747ae12600cf9c0095ccfe9334bf265b44bff62a77cb0ed4a6080058",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/03_curvas_precision_recall.svg",
+      "bytes": 60094,
+      "sha256": "8a75e380a881338c7a5d0d42b31d4a497b31b70211825e3ad15d539b504dbb2b",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/03_curvas_roc.png",
+      "bytes": 123028,
+      "sha256": "aee3df04b8911367642589a6844840dbb9af0d668e08897b164705a43afd5c88",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/03_curvas_roc.svg",
+      "bytes": 56190,
+      "sha256": "76f913d1c7e02f449a4204a8ecc9fc2facdfd895416c27fcd01dbbd52ecf92a2",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/03_matriz_confusion.png",
+      "bytes": 77470,
+      "sha256": "d2053f4ef2a53b25ca9cf8b01b5183d82531bce79f917259906bf605c3478264",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/03_matriz_confusion.svg",
+      "bytes": 35077,
+      "sha256": "f421a18acd2fb8984b3fccb07e112790fcf46ba04b0bd92492c47f84058d3d05",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "generado en auditoría",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/04_shap_beeswarm.png",
+      "bytes": 97974,
+      "sha256": "f06f452547390009ae7addaa559f78b54a02ae6e0802b534e2956084362d1b4e",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/04_shap_dependence_1.png",
+      "bytes": 50964,
+      "sha256": "2237a245f697ba56c404e532d139b5283c59844724398ed02500a672edfe14ae",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/04_shap_dependence_2.png",
+      "bytes": 96112,
+      "sha256": "b100794009ea92479a511fa089fa7b6fb3837d9182697d6bcd26ef5666253765",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/04_shap_waterfall_alto_riesgo.png",
+      "bytes": 111345,
+      "sha256": "ace0c626655686a136f2687808ca5d02cd06b32c08e6a7ecc4f1818ac824380f",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "GRAFICAS_PNG/04_shap_waterfall_bajo_riesgo.png",
+      "bytes": 108113,
+      "sha256": "7869d87fb89a73891a23634615761fb15bb771e077b13031579dafb698c733f6",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "JSON_COMPLETOS/auditoria_cruce_matricula_2025.json",
+      "bytes": 449,
+      "sha256": "24325e265b7fd1f2e7a551ec009e05b793161d68cf44988160d3defae95496ae",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "JSON_COMPLETOS/auditoria_cruce_padlocal.json",
+      "bytes": 779,
+      "sha256": "59b50bb197ca0f5b42e9c536bc2f33c3f9be2095244a6b57255e9bd6df67b20e",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "JSON_COMPLETOS/auditoria_split_conglomerado.json",
+      "bytes": 346,
+      "sha256": "a177cad5df6db419ed00077f3d6e8120925ed9e62fbb24dc9c2a6503ce738a58",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "JSON_COMPLETOS/configuracion_clustering.json",
+      "bytes": 1208,
+      "sha256": "a6c4a42a3c9abe68405d5f5074e4392ba79e27ab2fd4331ef3c6b9cfa7935d72",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "JSON_COMPLETOS/metadatos_modelo.json",
+      "bytes": 1207,
+      "sha256": "374ccf0d7fc211c22e81307f5b931449dd1a0e6dca8ddc8a950d041fc030b79b",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "JSON_COMPLETOS/resumen_ejecucion.json",
+      "bytes": 1313,
+      "sha256": "bcc906800aef17cbbdb420e91d663a693285a860b3daabec426286010d092327",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "JSON_COMPLETOS/shap_casos_locales.json",
+      "bytes": 2304,
+      "sha256": "55b3747b9908c8665b404b49612cbb86ef1a81eeb6e38c862f171afe51c06647",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "JSON_COMPLETOS/shap_dependencias.json",
+      "bytes": 453,
+      "sha256": "f7f69cec87665ef8ff0ec4707badbae715d8d82ae993c24e0b001473987eca08",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "README_PARA_CHATGPT.md",
+      "bytes": 8280,
+      "sha256": "6ca301ad7c0281d58250938e43e709dc91265e401fe29e6597e6653bf46aa62b",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "TABLAS_CSV/02_caracterizacion_clusters.csv",
+      "bytes": 1665,
+      "sha256": "a7f4f1d2ad6070dfc53df7a13b24d32cee4f3aab55ed15702a168572c4356f76",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "TABLAS_CSV/comparacion_modelos.csv",
+      "bytes": 1369,
+      "sha256": "4f33d6ae403fe7602e24d153735a65cdd56d882cc1cb133f1b2b5b57e4c8cb17",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "TABLAS_CSV/cv_groupkfold_modelos.csv",
+      "bytes": 1513,
+      "sha256": "a6990a0ad38a1e62814982e2170e5b05b5b6e8654a58abdeb471d759a5e2b2cb",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "TABLAS_CSV/diccionario_variables.csv",
+      "bytes": 13442,
+      "sha256": "a1247a1fbb4144b03fd1698dab02568c95d51784e5b030ac3c0bd562f4000e94",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "TABLAS_CSV/distribucion_clases.csv",
+      "bytes": 252,
+      "sha256": "95f5ec0443a648120023b25619754dc36e16e7fb7f842ac9d752107ad88ed0ff",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "TABLAS_CSV/matriz_confusion.csv",
+      "bytes": 49,
+      "sha256": "ec5740cdcadf07adedbb9823aed40c5ecccdc4d85d2e377a9df4891061d77cc2",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "TABLAS_CSV/matriz_confusion_ponderada.csv",
+      "bytes": 143,
+      "sha256": "fc22a13337d744e9be47e21304ca9b05d2a1dc70dfa28deedb99d05a151c6371",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "TABLAS_CSV/matriz_cumplimiento_guia.csv",
+      "bytes": 3399,
+      "sha256": "4da0561b0c13c05757449a976b5f3cdee7e1dc9e83ebd3479ea019863fe0603f",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "TABLAS_CSV/metricas_clustering.csv",
+      "bytes": 757,
+      "sha256": "dd1afccf314a3d0a5eb0530e13b6cbf4e6f6feda54337515340ee2e6bbd353cd",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "TABLAS_CSV/pca_varianza.csv",
+      "bytes": 907,
+      "sha256": "457466f2c68e9a0fa4aca45da5062bf0d1d3dffdd94e9cdcb4ceab80084df2a7",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "TABLAS_CSV/perfiles_clusters.csv",
+      "bytes": 1669,
+      "sha256": "61420200fc5d6faa3a95d0ed14d4cab8eed041590a8435a11da595455c4e862a",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "TABLAS_CSV/resumen_variables_tic_enaho.csv",
+      "bytes": 4013,
+      "sha256": "b169c9a1a70d0ca92c998a02fdb1d5737c4231560a40a2b0e4eef04149d58a9d",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "TABLAS_CSV/schema_dataset.csv",
+      "bytes": 1245,
+      "sha256": "22664f2b0be6a544755a18ad4a23911cfda789c5b8ef7c0ee20a357e13973012",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    },
+    {
+      "ruta": "TABLAS_CSV/shap_importancia_top10.csv",
+      "bytes": 1237,
+      "sha256": "1209fb925eacce54a2c8f47ccf8921f0d7f0d39e1bc44fbd3cb40985b0532b2e",
+      "fecha_generacion_utc": "2026-10-29T02:02:22.236694+00:00",
+      "origen": "copiado/derivado de entregables/",
+      "verificacion": "integridad SHA-256 calculada; no implica validez científica automática"
+    }
+  ]
+}

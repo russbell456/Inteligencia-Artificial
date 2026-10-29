@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+data/processed/*
+outputs/figures/*
+outputs/models/*
+outputs/tables/*
+outputs/reports/*.html
+!data/processed/.gitkeep
+!outputs/figures/.gitkeep
+!outputs/models/.gitkeep
+!outputs/tables/.gitkeep

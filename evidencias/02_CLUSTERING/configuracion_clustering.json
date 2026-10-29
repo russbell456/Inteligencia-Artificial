@@ -1,0 +1,51 @@
+{
+  "muestra_n": 4000,
+  "semilla": 42,
+  "variables_numericas": [
+    "edad",
+    "grado_ebr",
+    "rezago_escolar_anios",
+    "P1121",
+    "P1144",
+    "agua_potable",
+    "agua_red_publica",
+    "saneamiento_red_publica",
+    "MIEPERHO",
+    "POBREZA",
+    "ingreso_hogar_percapita",
+    "gasto_hogar_percapita",
+    "esc_n_escuelas",
+    "esc_alumnos",
+    "esc_n_locales_padlocal",
+    "esc_docentes",
+    "esc_secciones",
+    "esc_prop_gestion_publica",
+    "esc_lat_media",
+    "esc_lon_media",
+    "esc_ratio_alumno_docente",
+    "esc_matricula_primaria_2025",
+    "esc_matricula_secundaria_2025",
+    "rural",
+    "tic_habilidades_digitales_n",
+    "tic_uso_computadora_ult3m",
+    "tic_frecuencia_uso_cluster"
+  ],
+  "variables_categoricas": [
+    "P203",
+    "P207",
+    "P300A",
+    "P308A",
+    "P110",
+    "P110A1",
+    "P111A",
+    "DOMINIO",
+    "ESTRATO"
+  ],
+  "identificador_UBIGEO_excluido_como_predictor": true,
+  "componentes_usados_metricas": 20,
+  "varianza_pca_2d": [
+    0.2290251103893642,
+    0.10423902897806847
+  ],
+  "nota": "PCA se ajusta tras imputación/estandarización; etiquetas descriptivas y sin validación externa."
+}
